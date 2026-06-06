@@ -1,0 +1,518 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+  --bg-primary: #070b14;
+  --bg-secondary: #111827;
+
+  --card-bg: #101827;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+
+  --accent: #7c5cff;
+  --accent-hover: #9378ff;
+
+  --border: #1f2937;
+
+  --shadow: 0 0 30px rgba(124, 92, 255, 0.2);
+}
+
+body.light-mode {
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+
+  --card-bg: #ffffff;
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+
+  --border: #d1d5db;
+
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: "Segoe UI", sans-serif;
+
+  line-height: 1.7;
+
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+
+  border-radius: 20px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(7, 11, 20, 0.92);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--border);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.navbar {
+  display: flex;
+
+  gap: 35px;
+}
+
+.navbar a {
+  text-decoration: none;
+
+  color: var(--text-primary);
+
+  font-weight: 600;
+
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.header-actions button {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 1.2rem;
+
+  background: var(--card-bg);
+
+  color: var(--text-primary);
+
+  transition: 0.3s;
+}
+
+.header-actions button:hover {
+  background: var(--accent);
+}
+
+body.light-mode .header {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .header-actions button {
+  background: #f3f4f6;
+
+  border: 1px solid #d1d5db;
+}
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+section {
+  padding: 120px 8%;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  padding-top: 140px;
+}
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 380px;
+  height: 380px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid var(--accent);
+
+  box-shadow: var(--shadow);
+}
+
+.hero-content {
+  flex: 1.3;
+}
+
+.hero-tag {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  margin-bottom: 25px;
+
+  border-radius: 999px;
+
+  background: rgba(124, 92, 255, 0.15);
+
+  color: #c4b5fd;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+
+  color: var(--accent);
+
+  margin-bottom: 20px;
+}
+
+.hero-content h2 span {
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   HERO TRADUCCIONES
+========================================== */
+
+.hero-description {
+  color: var(--text-secondary);
+
+  font-size: 1.1rem;
+
+  max-width: 700px;
+
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 20px;
+
+  margin-bottom: 35px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 35px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  border: 2px solid var(--accent);
+
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+}
+
+body.light-mode .btn-secondary:hover {
+  color: white;
+}
+
+/* ==========================================
+   REDES SOCIALES
+========================================== */
+
+.social-links {
+  display: flex;
+
+  gap: 20px;
+}
+
+.social-links a {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: var(--card-bg);
+
+  font-size: 1.3rem;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+
+  transform: translateY(-5px);
+}
+
+body.light-mode .social-links a {
+  color: #111827;
+}
+
+/* ==========================================
+   WHATSAPP
+========================================== */
+
+.whatsapp-button {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  background: #25d366;
+
+  color: white;
+
+  font-size: 2rem;
+
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
+
+  z-index: 9999;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+/* Tablets grandes */
+@media (max-width: 1100px) {
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+
+    white-space: nowrap;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 50px;
+
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  section {
+    padding: 100px 6%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 450px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-tag {
+    font-size: 0.8rem;
+
+    padding: 8px 16px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,21 @@
+```gitignore
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Visual Studio Code
+.vscode/
+
+# IntelliJ / JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Temporales
+*.tmp
+*.temp
+```
