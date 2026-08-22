@@ -695,6 +695,26 @@ body.light-mode .social-links a {
   margin-top: 15px;
 }
 
+.about-technologies {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px 30px;
+}
+
+.about-technologies .about-block-header {
+  grid-column: 1 / -1;
+}
+
+.about-technologies > p {
+  max-width: none;
+}
+
+.about-technologies > p + p {
+  margin-top: 0;
+}
+
 /* ==========================================
    CIERRE
 ========================================== */
@@ -952,6 +972,10 @@ body.light-mode .about-block {
 
   .about-intro-number {
     font-size: 4rem;
+  }
+
+  .about-technologies {
+    grid-template-columns: 1fr;
   }
 }
 
