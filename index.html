@@ -153,171 +153,188 @@
       </div>
 
       <!-- Introducción y recorrido -->
-      <article class="about-intro">
-        <div class="about-intro-number">01</div>
-
-        <div class="about-intro-content">
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">01</span>
           <span class="about-block-label">INTRODUCCIÓN Y RECORRIDO</span>
+        </summary>
 
+        <div class="about-accordion-body">
           <p class="about-main-text">
             Con más de
             <strong>3 años de formación y experiencia práctica</strong>
-            en el desarrollo backend, he orientado mi recorrido hacia la creación de aplicaciones centradas en la
-            gestión de datos, la organización de procesos y la integración entre distintas partes de un sistema.
+            en el desarrollo backend, he orientado mi recorrido hacia la
+            creación de
+            <strong>aplicaciones escalables para la gestión interna de
+            empresas</strong>, especialmente en áreas como la
+            <strong>automatización de procesos</strong>, el registro y
+            persistencia de información, la organización de datos y la
+            generación de informes.
+          </p>
+        </div>
+      </details>
+
+      <!-- Tecnologías -->
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">02</span>
+          <span class="about-block-label">TECNOLOGÍAS QUE UTILIZO</span>
+        </summary>
+
+        <div class="about-accordion-body">
+          <p>
+            Mi lenguaje principal es <strong>Java</strong>, que utilizo junto con
+            <strong>Spring Boot</strong> para desarrollar aplicaciones backend,
+            servicios y <strong>APIs REST</strong>. Trabajo con
+            <strong>Hibernate</strong> como ORM para gestionar la persistencia y el
+            acceso a datos dentro de las aplicaciones.
           </p>
 
           <p>
-            Mi trabajo se centra en recibir datos desde múltiples fuentes,
-            procesarlos, aplicar reglas de negocio y convertirlos en acciones,
-            registros o resultados que puedan utilizarse dentro de un flujo de
-            trabajo.
+            En bases de datos trabajo principalmente con <strong>MySQL</strong> dentro
+            del ecosistema SQL y con <strong>MongoDB</strong> cuando el proyecto
+            requiere un enfoque NoSQL. También estoy familiarizado con el consumo,
+            diseño y documentación de APIs, utilizando principalmente
+            <strong>Postman</strong>.
+          </p>
+
+          <p>
+            Utilizo <strong>Python</strong> como lenguaje complementario para
+            automatizaciones, procesamiento de datos, scripts y otras tareas que
+            requieren una solución más flexible. También integro herramientas y
+            servicios de <strong>inteligencia artificial</strong> dentro del desarrollo
+            cuando pueden aportar valor al flujo de trabajo o a la propia aplicación.
+          </p>
+
+          <p>
+            Para el desarrollo de interfaces trabajo con <strong>React</strong>,
+            principalmente en aplicaciones web que necesitan complementar el backend
+            con una interfaz gráfica.
+          </p>
+
+          <p>
+            En el control de versiones utilizo <strong>Git y GitHub</strong>, y para
+            testing en Java trabajo con <strong>JUnit</strong>. Actualmente también
+            estoy ampliando mis conocimientos en servicios cloud, especialmente dentro
+            de <strong>Amazon Web Services (AWS)</strong>.
           </p>
         </div>
-      </article>
-
-      <!-- Tecnologías -->
-      <article class="about-block about-technologies">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">02</span>
-            <span class="about-block-label">TECNOLOGÍAS QUE UTILIZO</span>
-          </div>
-        </div>
-
-        <p>
-          Mi lenguaje principal es <strong>Java</strong>, que utilizo junto con
-          <strong>Spring Boot</strong> para desarrollar aplicaciones backend,
-          servicios y <strong>APIs REST</strong>. Trabajo con
-          <strong>Hibernate</strong> como ORM para gestionar la persistencia y el
-          acceso a datos dentro de las aplicaciones.
-        </p>
-
-        <p>
-          En bases de datos trabajo principalmente con <strong>MySQL</strong> dentro
-          del ecosistema SQL y con <strong>MongoDB</strong> cuando el proyecto
-          requiere un enfoque NoSQL. También estoy familiarizado con el consumo,
-          diseño y documentación de APIs, utilizando principalmente
-          <strong>Postman</strong>.
-        </p>
-
-        <p>
-          Utilizo <strong>Python</strong> como lenguaje complementario para
-          automatizaciones, procesamiento de datos, scripts y otras tareas que
-          requieren una solución más flexible. También integro herramientas y
-          servicios de <strong>inteligencia artificial</strong> dentro del desarrollo
-          cuando pueden aportar valor al flujo de trabajo o a la propia aplicación.
-        </p>
-
-        <p>
-          Para el desarrollo de interfaces trabajo con <strong>React</strong>,
-          principalmente en aplicaciones web que necesitan complementar el backend
-          con una interfaz gráfica.
-        </p>
-
-        <p>
-          En el control de versiones utilizo <strong>Git y GitHub</strong>, y para
-          testing en Java trabajo con <strong>JUnit</strong>. Actualmente también
-          estoy ampliando mis conocimientos en servicios cloud, especialmente dentro
-          de <strong>Amazon Web Services (AWS)</strong>.
-        </p>
-
-      </article>
+      </details>
 
       <!-- Metodología y arquitectura -->
-      <article class="about-block about-methodology">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">03</span>
-            <span class="about-block-label">METODOLOGÍA Y ARQUITECTURA</span>
-          </div>
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">03</span>
+          <span class="about-block-label">METODOLOGÍA Y ARQUITECTURA</span>
+        </summary>
+
+        <div class="about-accordion-body">
+          <p>
+            Antes de empezar a desarrollar, intento entender cómo debe funcionar
+            el sistema completo: qué información recibe, qué validaciones
+            necesita, qué operaciones debe ejecutar, dónde se almacenan los datos
+            y qué otros servicios intervienen. A partir de ahí divido el backend
+            en componentes y responsabilidades antes de implementar cada parte.
+          </p>
+
+          <p>
+            Organizo principalmente mis proyectos mediante una
+            <strong>arquitectura por capas</strong>, separando controladores,
+            servicios, acceso a datos y comunicación con sistemas externos.
+            Dependiendo del tipo de aplicación, también trabajo con estructuras
+            <strong>MVC</strong> y enfoques <strong>modulares</strong>, buscando
+            que cada parte del sistema tenga una responsabilidad clara y pueda
+            evolucionar sin afectar innecesariamente al resto.
+          </p>
+
+          <p>
+            En proyectos de mayor tamaño también trabajo con enfoques como la
+            <strong>arquitectura de microservicios</strong> y la
+            <strong>arquitectura hexagonal</strong>, especialmente en
+            aplicaciones desarrolladas con <strong>Spring Boot</strong>,
+            separando responsabilidades y evitando que la lógica principal quede
+            demasiado ligada a la infraestructura o a servicios externos. Durante
+            el desarrollo avanzo de forma incremental, probando cada componente
+            antes de integrarlo con el resto de la aplicación.
+          </p>
         </div>
-
-        <p>
-          Organizo los proyectos mediante una
-          <strong>arquitectura por capas</strong>, separando la entrada de
-          datos, la lógica de negocio, el acceso a la información y la
-          comunicación con servicios externos.
-        </p>
-
-        <p>
-          Antes de desarrollar, analizo el proceso que debe automatizarse o
-          gestionarse y divido el sistema en responsabilidades. Organizo el
-          flujo separando la entrada de datos —procedente de APIs, archivos
-          o formularios—, su validación y transformación, la aplicación de
-          las reglas de negocio y, por último, la generación del resultado
-          en forma de datos, archivos o acciones.
-        </p>
-
-        <p>
-          Durante el desarrollo trabajo de forma incremental: implemento
-          cada parte del flujo, compruebo su funcionamiento de forma
-          aislada y la integro con el resto del sistema antes de continuar
-          con la siguiente responsabilidad.
-        </p>
-      </article>
+      </details>
 
       <!-- Casos reales -->
-      <article class="about-block about-cases">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">04</span>
-            <span class="about-block-label">CASOS DE TRABAJO</span>
-          </div>
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">04</span>
+          <span class="about-block-label">TRABAJOS REALIZADOS PARA EMPRESAS</span>
+        </summary>
+
+        <div class="about-accordion-body">
+          <p>
+            <strong>1. Gestor de licencias — Novacenter del Sur.</strong><br />
+            Desarrollé en Java una aplicación de escritorio con interfaz
+            gráfica para gestionar el enorme volumen de licencias de los
+            clientes de Novacenter del Sur, empresa de soporte del programa
+            TeoWin. El programa consulta, busca, inserta y organiza los
+            ficheros .ddl que antes se guardaban de forma dispersa en el
+            ordenador, asociando cada licencia con el nombre y los datos del
+            cliente correspondiente mediante una base de datos, lo que
+            agilizó su localización y mantenimiento diario.
+          </p>
+
+          <p>
+            <strong>2. Flor de Tuna — Desarrollo web para restaurante.</strong><br />
+            Diseño y desarrollo de una web corporativa para restaurante
+            orientada a captación y conversión de clientes, con una
+            estructura multipágina (carta, reservas, galería y contacto) y un
+            diseño responsive centrado en la experiencia de usuario. Apliqué
+            buenas prácticas de SEO técnico —HTML semántico y estructura
+            optimizada para indexación— y optimicé el rendimiento siguiendo
+            métricas Core Web Vitals, dejando el proyecto preparado como
+            plantilla reutilizable para futuros clientes.
+            <a class="about-link" href="https://flor-de-tuna-brasas.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
+          </p>
+
+          <p>
+            <strong>3. Gestor de pedidos y albaranes — Hotel Iberostar.</strong><br />
+            Herramienta desarrollada en Python para automatizar la
+            sincronización de movimientos de mercancía entre el Excel central
+            de Economato y los Excel mensuales de stock de cada punto de
+            venta del hotel. El sistema detecta automáticamente el punto de
+            venta y la hoja correcta, agrupa los productos por fecha y
+            actualiza el Excel correspondiente, creando productos y
+            plantillas nuevas cuando hace falta —con copias de seguridad
+            automáticas y guardado seguro antes de tocar cualquier archivo—,
+            eliminando el cuadre manual de stock cada mes.
+          </p>
+
+          <p class="about-link-row">
+            <a class="about-link" href="https://github.com/walteralee/iberostar-inventory-sync" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub</a>
+          </p>
         </div>
-
-        <p>
-          <strong>1. Gestor de licencias — Novacenter del Sur.</strong><br />
-          Desarrollé en Java una aplicación de escritorio con interfaz
-          gráfica para gestionar el enorme volumen de licencias de los
-          clientes de Novacenter del Sur, empresa de soporte del programa
-          TeoWin. El programa consulta, busca, inserta y organiza los
-          ficheros .ddl que antes se guardaban de forma dispersa en el
-          ordenador, asociando cada licencia con el nombre y los datos del
-          cliente correspondiente mediante una base de datos, lo que
-          agilizó su localización y mantenimiento diario.
-        </p>
-
-        <p>
-          <strong>2. Flor de Tuna — Desarrollo web para restaurante.</strong><br />
-          Diseño y desarrollo de una web corporativa para restaurante
-          orientada a captación y conversión de clientes, con una
-          estructura multipágina (carta, reservas, galería y contacto) y un
-          diseño responsive centrado en la experiencia de usuario. Apliqué
-          buenas prácticas de SEO técnico —HTML semántico y estructura
-          optimizada para indexación— y optimicé el rendimiento siguiendo
-          métricas Core Web Vitals, dejando el proyecto preparado como
-          plantilla reutilizable para futuros clientes.
-        </p>
-
-        <p>
-          <strong>3. Gestor de pedidos y albaranes — Hotel Iberostar.</strong><br />
-          Herramienta desarrollada en Python para automatizar la
-          sincronización de movimientos de mercancía entre el Excel central
-          de Economato y los Excel mensuales de stock de cada punto de
-          venta del hotel. El sistema detecta automáticamente el punto de
-          venta y la hoja correcta, agrupa los productos por fecha y
-          actualiza el Excel correspondiente, creando productos y
-          plantillas nuevas cuando hace falta —con copias de seguridad
-          automáticas y guardado seguro antes de tocar cualquier archivo—,
-          eliminando el cuadre manual de stock cada mes.
-        </p>
-      </article>
+      </details>
 
       <!-- Cierre -->
-      <article class="about-closing">
-        <span class="about-block-label">EN LA ACTUALIDAD</span>
+      <details class="about-accordion about-accordion--accent">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">05</span>
+          <span class="about-block-label">EN LA ACTUALIDAD</span>
+        </summary>
 
-        <h3>
-          Continúo desarrollando proyectos donde el backend no es únicamente
-          una API, sino el motor que organiza y automatiza todo el proceso.
-        </h3>
+        <div class="about-accordion-body">
+          <h3>
+            Actualmente estoy dando un paso más allá de los proyectos
+            puramente académicos o personales, acercándome a empresas para
+            conocer de primera mano cómo trabajan, qué problemas encuentran en
+            su día a día y dónde el software puede tener una aplicación real.
+          </h3>
 
-        <p>
-          Mi objetivo es seguir construyendo software que conecte datos,
-          reglas de negocio y operaciones reales para reducir trabajo manual
-          y mejorar la forma en la que se gestiona la información.
-        </p>
-      </article>
+          <p>
+            Busco seguir sumando experiencia en proyectos reales, conocer
+            distintos entornos de trabajo y convertir ese aprendizaje en nuevas
+            oportunidades profesionales, colaboraciones y software que pueda
+            demostrar fuera del código.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- INGLÉS -->
@@ -336,162 +353,183 @@
         </p>
       </div>
 
-      <article class="about-intro">
-        <div class="about-intro-number">01</div>
-
-        <div class="about-intro-content">
+      <!-- Background and experience -->
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">01</span>
           <span class="about-block-label">BACKGROUND AND EXPERIENCE</span>
+        </summary>
 
+        <div class="about-accordion-body">
           <p class="about-main-text">
             With more than <strong>3 years of training and hands-on experience</strong>
-            in backend development, I have focused my path on building applications centered on data management, process
-            organization, and integration between different parts of a system.
+            in backend development, I have focused my path on building
+            <strong>scalable applications for internal company
+            management</strong>, especially in areas such as
+            <strong>process automation</strong>, information recording and
+            persistence, data organization and report generation.
+          </p>
+        </div>
+      </details>
+
+      <!-- Technologies -->
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">02</span>
+          <span class="about-block-label">TECHNOLOGIES I USE</span>
+        </summary>
+
+        <div class="about-accordion-body">
+          <p>
+            My main programming language is <strong>Java</strong>, which I use together
+            with <strong>Spring Boot</strong> to develop backend applications, services,
+            and <strong>REST APIs</strong>. I work with <strong>Hibernate</strong> as an
+            ORM to manage data persistence and access within applications.
           </p>
 
           <p>
-            My work focuses on receiving data from multiple sources,
-            processing it, applying business rules and converting it into
-            actions, records or results that can be used within a workflow.
+            For databases, I mainly work with <strong>MySQL</strong> within the SQL
+            ecosystem and with <strong>MongoDB</strong> when a project requires a NoSQL
+            approach. I am also familiar with API consumption, design, and documentation,
+            mainly using <strong>Postman</strong>.
+          </p>
+
+          <p>
+            I use <strong>Python</strong> as a complementary language for automation,
+            data processing, scripts, and other tasks that require a more flexible
+            solution. I also integrate <strong>artificial intelligence</strong> tools
+            and services into development when they can add value to the workflow or
+            the application itself.
+          </p>
+
+          <p>
+            For interface development, I work with <strong>React</strong>, mainly in web
+            applications that need to complement the backend with a graphical interface.
+          </p>
+
+          <p>
+            For version control, I use <strong>Git and GitHub</strong>, and for testing
+            in Java I work with <strong>JUnit</strong>. I am currently also expanding my
+            knowledge of cloud services, especially within
+            <strong>Amazon Web Services (AWS)</strong>.
           </p>
         </div>
-      </article>
+      </details>
 
-      <article class="about-block about-technologies">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">02</span>
-            <span class="about-block-label">TECHNOLOGIES I USE</span>
-          </div>
+      <!-- Methodology and architecture -->
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">03</span>
+          <span class="about-block-label">METHODOLOGY AND ARCHITECTURE</span>
+        </summary>
+
+        <div class="about-accordion-body">
+          <p>
+            Before I start developing, I try to understand how the whole system
+            should work: what information it receives, what validations it needs,
+            what operations it must run, where the data is stored and which other
+            services are involved. From there I divide the backend into
+            components and responsibilities before implementing each part.
+          </p>
+
+          <p>
+            I mainly organize my projects using a
+            <strong>layered architecture</strong>, separating controllers,
+            services, data access and communication with external systems.
+            Depending on the type of application, I also work with
+            <strong>MVC</strong> structures and <strong>modular</strong>
+            approaches, aiming for each part of the system to have a clear
+            responsibility and to evolve without unnecessarily affecting the
+            rest.
+          </p>
+
+          <p>
+            On larger projects I also work with approaches such as
+            <strong>microservices architecture</strong> and
+            <strong>hexagonal architecture</strong>, especially in applications
+            built with <strong>Spring Boot</strong>, separating responsibilities
+            and preventing the core logic from becoming too tied to
+            infrastructure or external services. During development I progress
+            incrementally, testing each component before integrating it with the
+            rest of the application.
+          </p>
         </div>
+      </details>
 
-        <p>
-          My main programming language is <strong>Java</strong>, which I use together
-          with <strong>Spring Boot</strong> to develop backend applications, services,
-          and <strong>REST APIs</strong>. I work with <strong>Hibernate</strong> as an
-          ORM to manage data persistence and access within applications.
-        </p>
+      <!-- Working examples -->
+      <details class="about-accordion">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">04</span>
+          <span class="about-block-label">WORK DONE FOR COMPANIES</span>
+        </summary>
 
-        <p>
-          For databases, I mainly work with <strong>MySQL</strong> within the SQL
-          ecosystem and with <strong>MongoDB</strong> when a project requires a NoSQL
-          approach. I am also familiar with API consumption, design, and documentation,
-          mainly using <strong>Postman</strong>.
-        </p>
+        <div class="about-accordion-body">
+          <p>
+            <strong>1. License Manager — Novacenter del Sur.</strong><br />
+            I developed a Java desktop application with a graphical interface
+            to manage the huge volume of licenses belonging to Novacenter del
+            Sur's clients, a support company for the TeoWin software. The
+            program queries, searches, inserts and organizes the .ddl files
+            that used to be scattered across the computer, linking each
+            license to the corresponding client's name and details through a
+            database, which sped up daily lookup and maintenance.
+          </p>
 
-        <p>
-          I use <strong>Python</strong> as a complementary language for automation,
-          data processing, scripts, and other tasks that require a more flexible
-          solution. I also integrate <strong>artificial intelligence</strong> tools
-          and services into development when they can add value to the workflow or
-          the application itself.
-        </p>
+          <p>
+            <strong>2. Flor de Tuna — Restaurant Website Development.</strong><br />
+            Design and development of a corporate website for a restaurant
+            aimed at attracting and converting customers, with a multi-page
+            structure (menu, reservations, gallery and contact) and a
+            responsive design focused on user experience. I applied technical
+            SEO best practices —semantic HTML and a structure optimized for
+            indexing— and optimized performance following Core Web Vitals
+            metrics, leaving the project ready as a reusable template for
+            future clients.
+            <a class="about-link" href="https://flor-de-tuna-brasas.netlify.app/" target="_blank" rel="noopener noreferrer">View website</a>
+          </p>
 
-        <p>
-          For interface development, I work with <strong>React</strong>, mainly in web
-          applications that need to complement the backend with a graphical interface.
-        </p>
+          <p>
+            <strong>3. Order and Delivery Note Manager — Hotel Iberostar.</strong><br />
+            A tool developed in Python to automate the synchronization of
+            merchandise movements between the central Storeroom (Economato)
+            Excel file and the monthly stock Excel files for each of the
+            hotel's points of sale. The system automatically detects the
+            point of sale and the correct sheet, groups products by date and
+            updates the corresponding Excel file, creating new products and
+            templates when needed —with automatic backups and safe saving
+            before touching any file—, eliminating the manual monthly stock
+            reconciliation.
+          </p>
 
-        <p>
-          For version control, I use <strong>Git and GitHub</strong>, and for testing
-          in Java I work with <strong>JUnit</strong>. I am currently also expanding my
-          knowledge of cloud services, especially within
-          <strong>Amazon Web Services (AWS)</strong>.
-        </p>
-
-      </article>
-
-      <article class="about-block about-methodology">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">03</span>
-            <span class="about-block-label">METHODOLOGY AND ARCHITECTURE</span>
-          </div>
+          <p class="about-link-row">
+            <a class="about-link" href="https://github.com/walteralee/iberostar-inventory-sync" target="_blank" rel="noopener noreferrer">View repository on GitHub</a>
+          </p>
         </div>
+      </details>
 
-        <p>
-          I organize projects using a
-          <strong>layered architecture</strong>, separating data input,
-          business logic, data access and communication with external
-          services.
-        </p>
+      <!-- Currently -->
+      <details class="about-accordion about-accordion--accent">
+        <summary class="about-accordion-summary">
+          <span class="about-block-number">05</span>
+          <span class="about-block-label">CURRENTLY</span>
+        </summary>
 
-        <p>
-          Before developing, I analyze the process that needs to be
-          automated or managed and divide the system into
-          responsibilities. I organize the flow by separating data input
-          —from APIs, files or forms—, its validation and transformation,
-          the application of business rules and, finally, the generation
-          of the result as data, files or actions.
-        </p>
+        <div class="about-accordion-body">
+          <h3>
+            I am currently taking a step beyond purely academic or personal
+            projects, reaching out to companies to see first-hand how they
+            work, what problems they run into day to day and where software can
+            have a real application.
+          </h3>
 
-        <p>
-          I follow an incremental development process: I implement each
-          part of the flow, verify its behavior in isolation and integrate
-          it with the rest of the system before moving on to the next
-          responsibility.
-        </p>
-      </article>
-
-      <article class="about-block about-cases">
-        <div class="about-block-header">
-          <div>
-            <span class="about-block-number">04</span>
-            <span class="about-block-label">WORKING EXAMPLES</span>
-          </div>
+          <p>
+            I want to keep gaining experience on real projects, get to know
+            different working environments and turn that learning into new
+            professional opportunities, collaborations and software I can show
+            beyond the code.
+          </p>
         </div>
-
-        <p>
-          <strong>1. License Manager — Novacenter del Sur.</strong><br />
-          I developed a Java desktop application with a graphical interface
-          to manage the huge volume of licenses belonging to Novacenter del
-          Sur's clients, a support company for the TeoWin software. The
-          program queries, searches, inserts and organizes the .ddl files
-          that used to be scattered across the computer, linking each
-          license to the corresponding client's name and details through a
-          database, which sped up daily lookup and maintenance.
-        </p>
-
-        <p>
-          <strong>2. Flor de Tuna — Restaurant Website Development.</strong><br />
-          Design and development of a corporate website for a restaurant
-          aimed at attracting and converting customers, with a multi-page
-          structure (menu, reservations, gallery and contact) and a
-          responsive design focused on user experience. I applied technical
-          SEO best practices —semantic HTML and a structure optimized for
-          indexing— and optimized performance following Core Web Vitals
-          metrics, leaving the project ready as a reusable template for
-          future clients.
-        </p>
-
-        <p>
-          <strong>3. Order and Delivery Note Manager — Hotel Iberostar.</strong><br />
-          A tool developed in Python to automate the synchronization of
-          merchandise movements between the central Storeroom (Economato)
-          Excel file and the monthly stock Excel files for each of the
-          hotel's points of sale. The system automatically detects the
-          point of sale and the correct sheet, groups products by date and
-          updates the corresponding Excel file, creating new products and
-          templates when needed —with automatic backups and safe saving
-          before touching any file—, eliminating the manual monthly stock
-          reconciliation.
-        </p>
-      </article>
-
-      <article class="about-closing">
-        <span class="about-block-label">CURRENTLY</span>
-
-        <h3>
-          I continue developing projects where the backend is not simply an
-          API, but the engine that organizes and automates the entire
-          process.
-        </h3>
-
-        <p>
-          My goal is to continue building software that connects data,
-          business rules and real operations to reduce manual work and
-          improve how information is managed.
-        </p>
-      </article>
+      </details>
     </div>
   </section>
 
