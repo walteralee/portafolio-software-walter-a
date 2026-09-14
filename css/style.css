@@ -449,26 +449,6 @@ body.light-mode .social-links a {
   border-bottom: 1px solid var(--border);
 }
 
-.about::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 8%;
-
-  width: 1px;
-  height: 100%;
-
-  background: linear-gradient(
-    transparent,
-    rgba(124, 92, 255, 0.35),
-    transparent
-  );
-
-  pointer-events: none;
-}
-
 .about-language {
   position: relative;
 
@@ -1254,10 +1234,6 @@ body.light-mode .about-block {
 ---------------------------------------------------------- */
 
 @media (max-width: 900px) {
-  .about::before {
-    display: none;
-  }
-
   .section-heading {
     margin-bottom: 50px;
   }
