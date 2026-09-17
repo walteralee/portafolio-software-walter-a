@@ -1178,6 +1178,189 @@ body.light-mode .about-block {
 }
 
 /* ==========================================
+   PROYECTOS
+========================================== */
+
+.proyectos {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(124, 92, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(124, 92, 255, 0.08),
+      transparent 30%
+    ),
+    var(--bg-secondary);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.proyectos-language {
+  position: relative;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+.proyectos-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 45px 40px;
+}
+
+.proyecto-card {
+  overflow: hidden;
+
+  background: rgba(16, 24, 39, 0.72);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid var(--border);
+  border-radius: 28px;
+
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(124, 92, 255, 0.4);
+
+  box-shadow: var(--shadow);
+}
+
+.proyecto-media {
+  position: relative;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+}
+
+.proyecto-media img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-media img {
+  filter: blur(3px) brightness(0.55);
+
+  transform: scale(1.05);
+}
+
+.proyecto-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  opacity: 0;
+
+  background: rgba(7, 11, 20, 0.35);
+
+  transition: opacity 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-overlay {
+  opacity: 1;
+}
+
+.proyecto-btn {
+  padding: 12px 24px;
+
+  font-size: 0.92rem;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.proyecto-info {
+  padding: 30px 32px 34px;
+}
+
+.proyecto-title {
+  margin-bottom: 10px;
+
+  color: var(--text-primary);
+
+  font-size: 1.3rem;
+
+  font-weight: 700;
+}
+
+.proyecto-desc {
+  margin-bottom: 18px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.98rem;
+
+  line-height: 1.55;
+}
+
+.proyecto-author {
+  display: inline-block;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   PROYECTOS — MODO CLARO
+========================================== */
+
+body.light-mode .proyectos {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(124, 92, 255, 0.1),
+      transparent 30%
+    ),
+    var(--bg-secondary);
+}
+
+body.light-mode .proyecto-card {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+/* ==========================================
    WHATSAPP
 ========================================== */
 
@@ -1413,4 +1596,40 @@ body.light-mode .about-block {
     gap: 5px;
   }
 
+}
+
+/* ==========================================================
+   05. PROYECTOS
+========================================================== */
+
+/* ----------------------------------------------------------
+   TABLETS — HASTA 900 PX
+---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------
+   MÓVILES — HASTA 600 PX
+---------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .proyecto-overlay {
+    gap: 10px;
+  }
+
+  .proyecto-btn {
+    padding: 10px 18px;
+
+    font-size: 0.85rem;
+  }
 }

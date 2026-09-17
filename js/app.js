@@ -161,6 +161,25 @@ function setAboutAccordionOpenInstantly(details, body, isOpen) {
   body.style.maxHeight = isOpen ? "none" : "0px";
 }
 
+// Cierra un panel del idioma VISIBLE sin animación, desactivando su
+// transición un instante para forzar el cambio ya. Sin esto, justo después
+// de cerrar un panel seguiría midiendo su altura antigua (aún animando) al
+// calcular a dónde hacer scroll, y el destino calculado quedaría más abajo
+// de lo real.
+function closeAboutAccordionInstantly(details, body) {
+  const previousTransition = body.style.transition;
+
+  body.style.transition = "none";
+  details.open = false;
+  body.style.maxHeight = "0px";
+
+  // Fuerza el reflow para aplicar el cierre ya, antes de restaurar la
+  // transición para la próxima apertura/cierre animado.
+  body.offsetHeight;
+
+  body.style.transition = previousTransition;
+}
+
 // Cada idioma (.about-language) tiene su propio set de <details> 01-05.
 // Se emparejan por posición para que abrir/cerrar uno sincronice al instante
 // su equivalente oculto en el otro idioma, y el traductor no "resetee" el estado.
@@ -204,6 +223,98 @@ const aboutAccordionGroups = Array.from(
       });
     });
   });
+});
+
+// =========================================
+// NAVEGACIÓN SUPERIOR — RESET DE ACORDEONES "SOBRE MÍ" + SCROLL
+// =========================================
+
+// Índice del panel "02 - Tecnologías" dentro de cada idioma (0 = "01", etc.).
+const TECH_PANEL_INDEX = 1;
+
+// El panel "02 - Tecnologías" es el segundo <details> (índice 1) dentro de
+// cada idioma. Se reutiliza aboutAccordionGroups para no duplicar el estado
+// que ya gestiona el acordeón.
+const techAccordionPairedItems = aboutAccordionGroups.map((group) => group[TECH_PANEL_INDEX]);
+
+// Deja abierto ÚNICAMENTE el panel "targetIndex" (o ninguno si es null) en
+// el idioma visible, sincronizando al instante la versión oculta del otro
+// idioma. Los paneles que se cierran lo hacen sin animación (el usuario se
+// va a desplazar fuera de ellos) para que, justo después de llamar a esta
+// función, el layout ya sea el definitivo y el scroll se calcule bien. El
+// panel objetivo, si lo hay, sí se abre con la animación habitual.
+function setAboutAccordionsState(targetIndex) {
+  aboutAccordionGroups.forEach((group) => {
+    const isVisibleLanguage = group[0].details.closest(".about-language").classList.contains(currentLanguage);
+
+    group.forEach((item, index) => {
+      if (!item || item.details.dataset.animating === "true") return;
+
+      const shouldBeOpen = index === targetIndex;
+
+      if (item.details.open === shouldBeOpen) return;
+
+      if (isVisibleLanguage) {
+        if (shouldBeOpen) {
+          openAboutAccordion(item.details, item.body);
+        } else {
+          closeAboutAccordionInstantly(item.details, item.body);
+        }
+      } else {
+        setAboutAccordionOpenInstantly(item.details, item.body, shouldBeOpen);
+      }
+    });
+  });
+}
+
+function scrollToSectionWithHeaderOffset(sectionEl) {
+  const headerHeight = document.querySelector(".header").offsetHeight;
+  const targetTop = sectionEl.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+  window.scrollTo({ top: targetTop, behavior: "smooth" });
+}
+
+// Por cada ancla del menú: a qué panel de "Sobre mí" debe quedar abierto
+// (null = todos cerrados) y a qué elemento hacer scroll.
+const navSectionHandlers = {
+  "#inicio": { accordionTarget: null, getScrollTarget: () => document.getElementById("inicio") },
+  "#about": { accordionTarget: null, getScrollTarget: () => document.getElementById("about") },
+  "#tecnologias": {
+    accordionTarget: TECH_PANEL_INDEX,
+    getScrollTarget: () =>
+      techAccordionPairedItems.find((item) => item.details.closest(".about-language").classList.contains(currentLanguage))
+        .details,
+  },
+  "#proyectos": { accordionTarget: null, getScrollTarget: () => document.getElementById("proyectos") },
+  "#contacto": { accordionTarget: null, getScrollTarget: () => document.getElementById("contacto") },
+};
+
+document.querySelectorAll(".navbar a").forEach((link) => {
+  const href = link.getAttribute("href");
+  const handler = navSectionHandlers[href];
+
+  if (handler) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      setAboutAccordionsState(handler.accordionTarget);
+
+      const scrollTarget = handler.getScrollTarget();
+      if (scrollTarget) {
+        scrollToSectionWithHeaderOffset(scrollTarget);
+      }
+    });
+
+    return;
+  }
+
+  // CV abre cv.html en pestaña nueva (navegación por defecto): solo
+  // reseteamos los desplegables de "Sobre mí" antes de que se abra.
+  if (href === "cv.html") {
+    link.addEventListener("click", () => {
+      setAboutAccordionsState(null);
+    });
+  }
 });
 
 // =========================================
