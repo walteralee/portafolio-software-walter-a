@@ -318,6 +318,47 @@ document.querySelectorAll(".navbar a").forEach((link) => {
 });
 
 // =========================================
+// PROYECTOS — MODAL VIDEO DEMO
+// =========================================
+
+const videoModalOverlay = document.getElementById("videoModalOverlay");
+const videoModalIframe = document.getElementById("videoModalIframe");
+const videoModalClose = document.getElementById("videoModalClose");
+
+function openVideoModal(youtubeId) {
+  videoModalIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+  videoModalOverlay.classList.add("active");
+}
+
+function closeVideoModal() {
+  videoModalOverlay.classList.remove("active");
+
+  // Vacía el src para detener la reproducción al cerrar.
+  videoModalIframe.src = "";
+}
+
+document.querySelectorAll(".proyecto-demo-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    openVideoModal(button.dataset.youtube);
+  });
+});
+
+videoModalClose.addEventListener("click", closeVideoModal);
+
+videoModalOverlay.addEventListener("click", (event) => {
+  if (event.target === videoModalOverlay) {
+    closeVideoModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && videoModalOverlay.classList.contains("active")) {
+    closeVideoModal();
+  }
+});
+
+// =========================================
 // MENSAJE CONSOLA
 // =========================================
 

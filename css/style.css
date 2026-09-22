@@ -1392,6 +1392,90 @@ body.light-mode .proyecto-card {
 
   z-index: 9999;
 }
+
+/* ==========================================
+   MODAL VIDEO DEMO
+========================================== */
+
+.video-modal-overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  z-index: 10000;
+
+  padding: 20px;
+}
+
+.video-modal-overlay.active {
+  display: flex;
+}
+
+.video-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 960px;
+}
+
+.video-modal-frame {
+  position: relative;
+
+  width: 100%;
+  padding-top: 56.25%;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 0 40px rgba(124, 92, 255, 0.3);
+}
+
+.video-modal-frame iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+.video-modal-close {
+  position: absolute;
+
+  top: -45px;
+  right: 0;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: #fff;
+
+  font-size: 1.4rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.video-modal-close:hover {
+  background: var(--accent-hover);
+}
+
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
