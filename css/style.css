@@ -1264,6 +1264,11 @@ body.light-mode .about-block {
     filter 0.3s ease;
 }
 
+/* Capturas con barra superior: recortar solo por abajo */
+.proyecto-media img.proyecto-img-top {
+  object-position: top;
+}
+
 .proyecto-card:hover .proyecto-media img {
   filter: blur(3px) brightness(0.55);
 
