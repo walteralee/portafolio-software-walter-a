@@ -87,5 +87,5 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 
 ### 2026-10-07
 - **Hecho:** tarjeta de **Miniaturas** completada en español e inglés (sustituye a la de relleno "Dashboard de Métricas"), con captura `imagenes/proyectos/miniaturas.webp` y enlace a https://github.com/walteralee/Miniaturas.
-- **Decisión:** Miniaturas no tiene botón «Ver demo» porque es una app local sin desplegar; solo botón GitHub.
+- **Decisión:** Miniaturas mantiene el botón «Ver demo» (Walter lo quiere; de momento con el vídeo de demo genérico) además del botón GitHub.
 - Quedan 3 tarjetas de relleno: Tres en raya, Drones y medicamentos y Carnicería Rivas.
