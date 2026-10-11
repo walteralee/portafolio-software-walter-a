@@ -89,3 +89,8 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Hecho:** tarjeta de **Miniaturas** completada en español e inglés (sustituye a la de relleno "Dashboard de Métricas"), con captura `imagenes/proyectos/miniaturas.webp` y enlace a https://github.com/walteralee/Miniaturas.
 - **Decisión:** Miniaturas mantiene el botón «Ver demo» (Walter lo quiere; de momento con el vídeo de demo genérico) además del botón GitHub.
 - Quedan 3 tarjetas de relleno: Tres en raya, Drones y medicamentos y Carnicería Rivas.
+
+### 2026-10-11
+- **Hecho:** tarjeta de **Tres en raya** en español e inglés (sustituye a la de relleno "Bot de Automatización", la 4.ª), con miniatura `imagenes/proyectos/tres-en-raya.webp` (las 3 capturas de la app en fila, formato 16:10) y enlace a https://github.com/walteralee/Tres_en_raya_Walter. Mantiene «Ver demo» con el vídeo genérico.
+- El repo de Tres en raya quedó listo: README con instalación en 3 pasos y QR, Release v1.0 con `TresEnRaya.apk`, 14 tests.
+- Quedan 2 tarjetas de relleno: Drones y medicamentos y Carnicería Rivas.
