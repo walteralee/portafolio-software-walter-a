@@ -94,3 +94,9 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Hecho:** tarjeta de **Tres en raya** en español e inglés (sustituye a la de relleno "Bot de Automatización", la 4.ª), con miniatura `imagenes/proyectos/tres-en-raya.webp` (las 3 capturas de la app en fila, formato 16:10) y enlace a https://github.com/walteralee/Tres_en_raya_Walter. Mantiene «Ver demo» con el vídeo genérico.
 - El repo de Tres en raya quedó listo: README con instalación en 3 pasos y QR, Release v1.0 con `TresEnRaya.apk`, 14 tests.
 - Quedan 2 tarjetas de relleno: Drones y medicamentos y Carnicería Rivas.
+
+### 2026-10-12
+- **Hecho:** tarjeta de **Drones y Medicamentos** en español e inglés (sustituye a la de relleno "Sistema de Facturación", la 5.ª), con miniatura `imagenes/proyectos/drones-y-medicamentos.webp` (dos capturas de la app en ventanas de navegador, formato 16:10) y enlace a https://github.com/walteralee/Drones-y-Medicamentos-ASP.NET. Mantiene «Ver demo» con el vídeo genérico.
+- El repo de Drones quedó listo: arquitectura por capas, `run.bat`/`run.sh` en la raíz, 14 tests, README completo y Release v1.0 con `DronesYMedicamentos-Windows.zip` (no necesita instalar nada ni deja rastro).
+- **Pendiente en Drones:** probar Docker (el motor de Docker Desktop no arrancaba en el equipo de Walter).
+- Queda 1 tarjeta de relleno: Carnicería Rivas.
