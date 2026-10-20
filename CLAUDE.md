@@ -100,3 +100,10 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - El repo de Drones quedó listo: arquitectura por capas, `run.bat`/`run.sh` en la raíz, 14 tests, README completo y Release v1.0 con `DronesYMedicamentos-Windows.zip` (no necesita instalar nada ni deja rastro).
 - **Pendiente en Drones:** probar Docker (el motor de Docker Desktop no arrancaba en el equipo de Walter).
 - Queda 1 tarjeta de relleno: Carnicería Rivas.
+
+### 2026-10-20
+- **Hecho:** tarjeta de **Carnicería Rivas** (versión Spring Boot) en español e inglés (sustituye a la de relleno "Plataforma de Tickets", la 6.ª), con miniatura `imagenes/proyectos/carniceria-rivas.webp` (carrito y catálogo en ventanas de navegador, formato 16:10) y enlace a https://github.com/walteralee/springboot-carniceria-rivas. Mantiene «Ver demo» con el vídeo genérico.
+- **Ya no quedan tarjetas de relleno** en Proyectos. Las imágenes `imagenes/proyectos/proyecto-02.svg` a `proyecto-06.svg` ya no se usan.
+- El repo de Carnicería Rivas quedó listo: backend por capas (controlador, servicio, repositorio, dto, error), catálogo y pedidos con líneas (el total lo calcula el servidor), 10 tests, `run.bat`/`run.sh`, Docker, README completo y versión de Windows con Java incluido (jpackage) que no deja rastro.
+- **Pendiente en Carnicería Rivas:** publicar la Release v1.0 (`CarniceriaRivas-Windows.zip` y `carniceria-rivas.jar` de `dist/`) y rellenar el About del repositorio; probar Docker.
+- **Pendiente general (siguiente en prioridad):** sección Contacto y footer, y arreglar los enlaces rotos del menú (`#tecnologias`, `#contacto`).
