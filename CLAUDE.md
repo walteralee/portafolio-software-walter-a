@@ -111,7 +111,7 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 ### 2026-10-24
 - **Hecho:** sección **Contacto** (`#contacto`) basada en la captura de referencia que pasó Walter: tarjeta de datos (email con botón copiar, ubicación, disponibilidad, Descargar CV y GitHub/LinkedIn/WhatsApp) y formulario (nombre, email, asunto, mensaje) en español/inglés, modo claro/oscuro y móvil. El enlace "Contacto" del menú ya funciona.
 - **Decisión:** el formulario se envía con **Web3Forms** (sin backend, gratis hasta 250 mensajes/mes) al Gmail de Walter. La clave pública está en `index.html` (`access_key`) y la lógica en `js/contacto.js` (validación, envío sin recargar, mensajes ES/EN, antispam `botcheck`). Probado con un envío real desde local: Web3Forms respondió OK.
-- **Hecho:** **footer** con logo, enlaces, redes, © año automático y "Volver arriba".
+- **Hecho:** **footer** sencillo inspirado en el de Fátima (decisión de Walter): línea divisoria arriba y una fila con "© año Walter Alejandro Cutiño Ledo. Hecho con código y mucho café" + taza humeante, y a la derecha los logos de GitHub, LinkedIn y email. Sin menú, sin logo y sin "Volver arriba".
 - `js/app.js` ahora avisa del cambio de idioma con el evento `cambio-idioma` y pone `lang` en `<html>`.
 - Ubicación en Contacto: **Cádiz, España**.
 - Walter confirmó que el mensaje de prueba le llegó a Gmail.
