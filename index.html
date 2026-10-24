@@ -917,6 +917,200 @@
   </section>
 
   <!-- ========================= -->
+  <!-- CONTACTO -->
+  <!-- ========================= -->
+
+  <section id="contacto" class="contacto">
+    <div class="contacto-contenedor">
+      <div class="section-heading">
+        <span class="section-label es">CONTACTO</span>
+        <span class="section-label en">CONTACT</span>
+
+        <h2 class="es">¿Hablamos? <span>Escríbeme</span></h2>
+        <h2 class="en">Let's talk. <span>Get in touch</span></h2>
+
+        <p class="es">
+          ¿Tienes una oferta, un proyecto o una idea? Mándame un mensaje y te responderé lo antes posible.
+        </p>
+        <p class="en">
+          Have a job offer, a project or an idea? Send me a message and I'll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <div class="contacto-grid">
+        <!-- DATOS DE CONTACTO -->
+        <aside class="contacto-tarjeta contacto-datos">
+          <h3>
+            <span class="es">Datos de contacto</span>
+            <span class="en">Contact details</span>
+          </h3>
+
+          <ul class="contacto-lista">
+            <li class="contacto-item">
+              <span class="contacto-icono"><i class="fas fa-envelope"></i></span>
+              <div>
+                <span class="contacto-etiqueta">Email</span>
+                <div class="contacto-email">
+                  <a href="mailto:walterale2002@gmail.com">walterale2002@gmail.com</a>
+                  <button type="button" class="contacto-copiar" id="copiarEmail" data-email="walterale2002@gmail.com" aria-label="Copiar email" title="Copiar">
+                    <i class="far fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li class="contacto-item">
+              <span class="contacto-icono"><i class="fas fa-location-dot"></i></span>
+              <div>
+                <span class="contacto-etiqueta es">Ubicación</span>
+                <span class="contacto-etiqueta en">Location</span>
+                <p class="es">España</p>
+                <p class="en">Spain</p>
+              </div>
+            </li>
+
+            <li class="contacto-item">
+              <span class="contacto-icono"><i class="fas fa-clock"></i></span>
+              <div>
+                <span class="contacto-etiqueta es">Disponibilidad</span>
+                <span class="contacto-etiqueta en">Availability</span>
+                <p class="es">Disponible para empleo y proyectos freelance</p>
+                <p class="en">Open to full-time roles and freelance projects</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="docs/Curriculum_Programador_Walter_Cutino_Ledo.pdf" download class="btn-secondary contacto-cv es">
+            <i class="fas fa-download"></i> Descargar CV
+          </a>
+          <a href="docs/Walter_Cutino_Ledo_Software_Developer_CV.pdf" download class="btn-secondary contacto-cv en">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+
+          <div class="contacto-redes">
+            <a href="https://github.com/walteralee" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/walter-cutino-ledo/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/34663382551" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </aside>
+
+        <!-- FORMULARIO (se envía a Gmail a través de Web3Forms; la lógica está en js/contacto.js) -->
+        <form id="formContacto" class="contacto-tarjeta contacto-form" novalidate>
+          <!-- Clave pública de Web3Forms: solo permite enviar mensajes al Gmail de Walter -->
+          <input type="hidden" name="access_key" value="11d063f1-e41b-4acb-81cf-1472073e10db" />
+          <input type="hidden" name="from_name" value="Portafolio de Walter Cutiño" />
+
+          <!-- Trampa antispam: las personas no la ven; si un bot la marca, Web3Forms descarta el mensaje -->
+          <input type="checkbox" name="botcheck" class="contacto-trampa" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="contacto-fila">
+            <div class="contacto-campo">
+              <label for="contactoNombre">
+                <span class="es">Tu nombre</span>
+                <span class="en">Your name</span>
+              </label>
+              <input type="text" id="contactoNombre" name="name" autocomplete="name" maxlength="80"
+                data-placeholder-es="Escribe tu nombre" data-placeholder-en="Enter your name" />
+              <small class="contacto-error" data-error="name"></small>
+            </div>
+
+            <div class="contacto-campo">
+              <label for="contactoEmail">
+                <span class="es">Tu email</span>
+                <span class="en">Email address</span>
+              </label>
+              <input type="email" id="contactoEmail" name="email" autocomplete="email" maxlength="120"
+                data-placeholder-es="tu@email.com" data-placeholder-en="you@email.com" />
+              <small class="contacto-error" data-error="email"></small>
+            </div>
+          </div>
+
+          <div class="contacto-campo">
+            <label for="contactoAsunto">
+              <span class="es">Asunto</span>
+              <span class="en">Subject</span>
+            </label>
+            <input type="text" id="contactoAsunto" name="asunto" maxlength="120"
+              data-placeholder-es="Oferta de empleo, colaboración..." data-placeholder-en="Job offer, collaboration..." />
+            <small class="contacto-error" data-error="asunto"></small>
+          </div>
+
+          <div class="contacto-campo">
+            <label for="contactoMensaje">
+              <span class="es">Mensaje</span>
+              <span class="en">Message</span>
+            </label>
+            <textarea id="contactoMensaje" name="message" rows="6" maxlength="3000"
+              data-placeholder-es="Cuéntame en qué puedo ayudarte..." data-placeholder-en="Tell me how I can help you..."></textarea>
+            <small class="contacto-error" data-error="message"></small>
+          </div>
+
+          <button type="submit" class="contacto-enviar" id="contactoEnviar">
+            <span class="contacto-enviar-texto">
+              <span class="es">Enviar mensaje</span>
+              <span class="en">Send message</span>
+            </span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <p class="contacto-estado" id="contactoEstado" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-marca">
+        <a href="#inicio" class="logo footer-logo">WALTER <span>CUTIÑO</span></a>
+        <p>Back-End Developer · Full-Stack Junior</p>
+      </div>
+
+      <nav class="footer-enlaces">
+        <a href="#inicio" class="es">Inicio</a>
+        <a href="#about" class="es">Sobre mí</a>
+        <a href="#proyectos" class="es">Proyectos</a>
+        <a href="#contacto" class="es">Contacto</a>
+
+        <a href="#inicio" class="en">Home</a>
+        <a href="#about" class="en">About Me</a>
+        <a href="#proyectos" class="en">Projects</a>
+        <a href="#contacto" class="en">Contact</a>
+      </nav>
+
+      <div class="footer-redes">
+        <a href="https://github.com/walteralee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/walter-cutino-ledo/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:walterale2002@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-inferior">
+      <p>
+        © <span id="anioActual">2026</span> Walter Alejandro Cutiño Ledo.
+        <span class="es">Todos los derechos reservados.</span>
+        <span class="en">All rights reserved.</span>
+      </p>
+
+      <a href="#inicio" class="footer-arriba">
+        <span class="es">Volver arriba</span>
+        <span class="en">Back to top</span>
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ========================= -->
   <!-- WHATSAPP -->
   <!-- ========================= -->
 
@@ -938,6 +1132,7 @@
   </div>
 
   <script src="js/app.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 
 </html>

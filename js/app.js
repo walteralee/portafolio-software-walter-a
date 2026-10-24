@@ -64,6 +64,10 @@ function setLanguage(language) {
 
     currentLanguage = "en";
   }
+
+  // Avisa al resto de la página (por ejemplo, al formulario de contacto) del idioma elegido
+  document.documentElement.lang = language;
+  document.dispatchEvent(new CustomEvent("cambio-idioma", { detail: language }));
 }
 
 languageBtn.addEventListener("click", () => {
