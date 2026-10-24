@@ -683,25 +683,48 @@ body.light-mode .cv-barra {
 
   gap: 10px;
 
-  padding: 15px 26px;
+  padding: 14px 24px;
 
-  border-radius: 999px;
+  /* Sobrio: fondo oscuro como las tarjetas, borde morado del portafolio y sin degradados */
+  border: 1px solid rgba(124, 92, 255, 0.55);
+  border-radius: 14px;
 
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--bg-secondary);
 
-  color: white;
+  color: var(--text-primary);
 
   font-weight: 700;
 
   text-decoration: none;
 
-  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 
-  transition: transform 0.3s;
+  transition:
+    background 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.cv-descargar i {
+  color: var(--accent);
+
+  transition: color 0.3s;
 }
 
 .cv-descargar:hover {
-  transform: translateY(-3px);
+  border-color: var(--accent);
+
+  background: var(--accent);
+
+  color: white;
+}
+
+.cv-descargar:hover i {
+  color: white;
+}
+
+body.light-mode .cv-descargar {
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12);
 }
 
 /* ==========================================================
