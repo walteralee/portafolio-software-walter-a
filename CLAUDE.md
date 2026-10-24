@@ -114,4 +114,5 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Hecho:** **footer** con logo, enlaces, redes, © año automático y "Volver arriba".
 - `js/app.js` ahora avisa del cambio de idioma con el evento `cambio-idioma` y pone `lang` en `<html>`.
 - Ubicación en Contacto: **Cádiz, España**.
-- **Pendiente:** confirmar que el mensaje de prueba le llegó a Gmail; arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
+- Walter confirmó que el mensaje de prueba le llegó a Gmail.
+- **Pendiente:** arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
