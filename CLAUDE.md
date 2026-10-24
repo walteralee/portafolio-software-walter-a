@@ -113,4 +113,5 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Decisión:** el formulario se envía con **Web3Forms** (sin backend, gratis hasta 250 mensajes/mes) al Gmail de Walter. La clave pública está en `index.html` (`access_key`) y la lógica en `js/contacto.js` (validación, envío sin recargar, mensajes ES/EN, antispam `botcheck`). Probado con un envío real desde local: Web3Forms respondió OK.
 - **Hecho:** **footer** con logo, enlaces, redes, © año automático y "Volver arriba".
 - `js/app.js` ahora avisa del cambio de idioma con el evento `cambio-idioma` y pone `lang` en `<html>`.
-- **Pendiente:** Walter tiene que decir su ciudad (ahora pone "España"); confirmar que el mensaje de prueba le llegó a Gmail; arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
+- Ubicación en Contacto: **Cádiz, España**.
+- **Pendiente:** confirmar que el mensaje de prueba le llegó a Gmail; arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
