@@ -122,3 +122,8 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - Resumen profesional del CV reescrito a partir de "Inicio" e "Introducción y recorrido" del index, mencionando el grado superior DAM. Cifra cambiada a "3+ años de formación y práctica" para cuadrar con el index.
 - Botón "Descargar PDF" del CV con estilo sobrio (fondo oscuro, borde morado; se rellena al pasar el ratón).
 - **Pendiente de confirmar por Walter:** los niveles de las barras (Avanzado/Intermedio) y las cifras (6 proyectos, 3+ años, 4 meses de prácticas).
+
+### 2026-10-25
+- **Hecho:** CV en PDF (español e inglés) actualizados en Canva para que coincidan con el CV online, sin los proyectos (decisión de Walter). Mismo resumen, mismos conocimientos que el index, enlace al portafolio web, "Cádiz, España", grado superior DAM, Español (nativo) + Inglés (B1), tildes y erratas corregidas. Los dos CV tienen la misma maquetación.
+- Los PDF nuevos sustituyen a los de `docs/` con el mismo nombre (los botones de descarga no cambian). Los antiguos están en `_papelera/` (carpeta de trabajo) con el sufijo `_antiguo_2026-06`.
+- Diseños de Canva: ES `DAHBHwYQ2wo`, EN `DAHLop407yM`. Copias de seguridad de antes de los cambios: `DAHY9eQQ2dg` (ES) y `DAHY9V9K1xo` (EN).
