@@ -82,7 +82,8 @@ languageBtn.addEventListener("click", () => {
 // INICIALIZAR IDIOMA
 // =========================================
 
-setLanguage("es");
+// Si la dirección trae ?lang=en (por ejemplo, al volver desde el CV en inglés) se abre en inglés
+setLanguage(new URLSearchParams(window.location.search).get("lang") === "en" ? "en" : "es");
 
 // =========================================
 // ANIMACIÓN SUAVE AL CARGAR
