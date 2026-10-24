@@ -118,4 +118,7 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Pendiente:** arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
 - **Hecho:** **CV online** (`cv.html`, `css/cv.css`, `js/cv.js`) basado en el diseño del CV de Fátima y en los PDF reales de Walter: columna lateral (foto, contacto, habilidades con barra, herramientas, idiomas, datos de interés) y principal (cifras, resumen, experiencia, 4 proyectos destacados, formación), botón flotante "Descargar PDF", "Volver al portafolio", ES/EN y modo claro/oscuro (comparte la clave `theme` con el portafolio).
 - El botón "CV" del menú en inglés abre `cv.html?lang=en`, y el portafolio también lee `?lang=en` al arrancar.
-- **Pendiente de confirmar por Walter:** los niveles de las barras de habilidades y las 3 cifras (6 proyectos, 2 años DAM, 4 meses de prácticas), que no vienen en el CV en PDF.
+- **Decisión (Walter):** las habilidades y herramientas del CV deben coincidir con las del `index.html` (sin añadir ni quitar). Barras: Java · Spring Boot · Hibernate, MySQL, Python, JavaScript · Node.js, React, MongoDB. Herramientas: Git & GitHub, Docker, n8n, Postman, JUnit, Claude Code, Modelos de IA (pedido expreso de Walter) y AWS (aprendiendo).
+- Resumen profesional del CV reescrito a partir de "Inicio" e "Introducción y recorrido" del index, mencionando el grado superior DAM. Cifra cambiada a "3+ años de formación y práctica" para cuadrar con el index.
+- Botón "Descargar PDF" del CV con estilo sobrio (fondo oscuro, borde morado; se rellena al pasar el ratón).
+- **Pendiente de confirmar por Walter:** los niveles de las barras (Avanzado/Intermedio) y las cifras (6 proyectos, 3+ años, 4 meses de prácticas).
