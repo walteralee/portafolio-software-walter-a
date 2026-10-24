@@ -116,3 +116,6 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - Ubicación en Contacto: **Cádiz, España**.
 - Walter confirmó que el mensaje de prueba le llegó a Gmail.
 - **Pendiente:** arreglar el enlace "Tecnologías" del menú (la fila está duplicada en los bloques ES y EN).
+- **Hecho:** **CV online** (`cv.html`, `css/cv.css`, `js/cv.js`) basado en el diseño del CV de Fátima y en los PDF reales de Walter: columna lateral (foto, contacto, habilidades con barra, herramientas, idiomas, datos de interés) y principal (cifras, resumen, experiencia, 4 proyectos destacados, formación), botón flotante "Descargar PDF", "Volver al portafolio", ES/EN y modo claro/oscuro (comparte la clave `theme` con el portafolio).
+- El botón "CV" del menú en inglés abre `cv.html?lang=en`, y el portafolio también lee `?lang=en` al arrancar.
+- **Pendiente de confirmar por Walter:** los niveles de las barras de habilidades y las 3 cifras (6 proyectos, 2 años DAM, 4 meses de prácticas), que no vienen en el CV en PDF.
