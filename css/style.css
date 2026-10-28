@@ -1130,17 +1130,33 @@ body.light-mode .about-accordion--accent {
   background: var(--accent);
 }
 
-@media (max-width: 500px) {
+/* En móvil el texto deja de ir sangrado a la altura del título: con la
+   sangría de 114 px se quedaba en una columna de unos 180 px */
+@media (max-width: 600px) {
   .about-accordion {
-    --about-indent: 114px;
+    --about-indent: 22px;
   }
 
+  /* Número, separación y espaciado de letras más pequeños para que los
+     títulos ("TRABAJOS REALIZADOS PARA EMPRESAS") no se partan en 4 líneas */
   .about-accordion-summary {
-    padding: 26px 28px;
+    gap: 16px;
+
+    padding: 22px;
+  }
+
+  .about-accordion-summary .about-block-number {
+    min-width: 44px;
+
+    font-size: 1.8rem;
+  }
+
+  .about-accordion-summary .about-block-label {
+    letter-spacing: 2px;
   }
 
   .about-accordion-body {
-    padding: 0 28px 34px var(--about-indent);
+    padding: 0 22px 30px var(--about-indent);
   }
 
   .about-accordion[open] .about-accordion-body {
@@ -1303,6 +1319,40 @@ body.light-mode .about-block {
   opacity: 1;
 }
 
+/* Móviles y tablets táctiles: no hay "pasar el ratón", así que los botones
+   se ven siempre, abajo a la izquierda de la captura (a la derecha los
+   taparía el botón de WhatsApp), sin difuminarla.
+   (Antes estaban invisibles pero se podían pulsar sin saberlo.) */
+@media (hover: none) {
+  .proyecto-card:hover {
+    transform: none;
+  }
+
+  .proyecto-card:hover .proyecto-media img {
+    filter: none;
+
+    transform: none;
+  }
+
+  .proyecto-overlay {
+    opacity: 1;
+
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    padding: 14px;
+
+    background: linear-gradient(to top, rgba(7, 11, 20, 0.6), transparent 60%);
+  }
+
+  /* Fondo oscuro para que el botón se lea sobre cualquier captura */
+  .proyecto-overlay .btn-secondary {
+    background: rgba(7, 11, 20, 0.8);
+
+    color: #fff;
+  }
+}
+
 .proyecto-btn {
   padding: 12px 24px;
 
@@ -1401,6 +1451,19 @@ body.light-mode .proyecto-card {
   box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
 
   z-index: 9999;
+}
+
+/* En móvil, más pequeño y más pegado a la esquina para tapar menos texto */
+@media (max-width: 600px) {
+  .whatsapp-button {
+    right: 14px;
+    bottom: 14px;
+
+    width: 54px;
+    height: 54px;
+
+    font-size: 1.6rem;
+  }
 }
 
 /* ==========================================
@@ -2026,10 +2089,13 @@ body.light-mode .contacto-error {
 ========================================================== */
 
 /* ----------------------------------------------------------
-   TABLETS — HASTA 900 PX
+   PORTÁTILES PEQUEÑOS Y TABLETS — HASTA 1150 PX
 ---------------------------------------------------------- */
 
-@media (max-width: 900px) {
+/* Por debajo de 1150 px el logo, los 6 enlaces y los botones ya no caben en
+   una línea (el logo se partía en dos y los enlaces se montaban), así que el
+   menú pasa al botón ☰ */
+@media (max-width: 1150px) {
   .navbar {
     display: none;
   }
@@ -2074,9 +2140,17 @@ body.light-mode .contacto-error {
   }
 
   .logo {
-    font-size: 1.5rem;
-
     white-space: nowrap;
+  }
+}
+
+/* ----------------------------------------------------------
+   TABLETS — HASTA 900 PX
+---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .logo {
+    font-size: 1.5rem;
   }
 }
 
@@ -2105,6 +2179,31 @@ body.light-mode .contacto-error {
     height: 38px;
 
     font-size: 1rem;
+  }
+}
+
+/* ----------------------------------------------------------
+   MÓVILES MUY PEQUEÑOS — HASTA 360 PX
+---------------------------------------------------------- */
+
+@media (max-width: 360px) {
+  .header {
+    padding: 14px 4%;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-actions button {
+    width: 34px;
+    height: 34px;
+
+    font-size: 0.9rem;
   }
 }
 
@@ -2168,8 +2267,10 @@ body.light-mode .contacto-error {
     width: 100%;
   }
 
-  .btn-primary,
-  .btn-secondary {
+  /* Solo los botones de la portada ocupan todo el ancho (antes afectaba
+     también a los de los proyectos y al de Contacto) */
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
     width: 100%;
 
     text-align: center;

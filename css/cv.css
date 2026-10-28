@@ -796,10 +796,17 @@ body.light-mode .cv-descargar {
     display: none;
   }
 
+  /* Más compacto para tapar menos texto al leer en el móvil */
   .cv-descargar {
-    right: 16px;
-    bottom: 16px;
+    right: 14px;
+    bottom: 14px;
 
-    padding: 13px 20px;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
   }
 }
