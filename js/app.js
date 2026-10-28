@@ -348,7 +348,7 @@ document.querySelectorAll(".navbar a").forEach((link) => {
     return;
   }
 
-  // CV abre cv.html en pestaña nueva (navegación por defecto): solo
+  // CV abre cv.html en la misma pestaña (navegación por defecto): solo
   // reseteamos los desplegables de "Sobre mí" antes de que se abra.
   if (href === "cv.html") {
     link.addEventListener("click", () => {

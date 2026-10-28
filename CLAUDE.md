@@ -142,3 +142,7 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
   - Proyectos en pantallas táctiles (`hover: none`): los botones GitHub/Sitio web se ven siempre abajo a la izquierda de la captura (antes eran invisibles pero se podían pulsar sin querer).
   - La regla de móvil que ponía todos los botones a ancho completo ahora solo afecta a los de la portada (estiraba los de los proyectos y el "Descargar CV" de Contacto).
   - WhatsApp (portafolio) y "Descargar PDF" (CV) más pequeños en móvil para tapar menos texto.
+- **Decisión (Walter, con recomendación de Claude):** acceso al CV. El reclutador ya recibe el PDF con la candidatura y el enlace "CV" del menú se ve poco (en móvil está dentro del ☰). Por eso:
+  - Botón de la portada: **"Ver CV" / "View CV"** → abre `cv.html` (antes descargaba el PDF). El PDF se descarga desde el CV online.
+  - Botón de Contacto: sigue siendo **"Descargar CV"** (PDF directo), porque quien llega ahí suele querer guardarlo o reenviarlo.
+  - El CV (menú y portada) se abre **en la misma pestaña**; el CV tiene "Volver al portafolio".
