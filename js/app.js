@@ -79,6 +79,38 @@ languageBtn.addEventListener("click", () => {
 });
 
 // =========================================
+// MENÚ EN MÓVIL Y TABLET (botón ☰)
+// =========================================
+
+const menuBtn = document.getElementById("menuBtn");
+const navbar = document.getElementById("navbar");
+
+function setMenuOpen(open) {
+  navbar.classList.toggle("abierto", open);
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  // Se cambia la clase del icono en lugar de reemplazarlo: si se reemplazara,
+  // el clic que lo abre llegaría al documento desde un icono ya quitado y
+  // el menú se cerraría al instante.
+  menuBtn.querySelector("i").className = open ? "fas fa-xmark" : "fas fa-bars";
+}
+
+menuBtn.addEventListener("click", () => {
+  setMenuOpen(!navbar.classList.contains("abierto"));
+});
+
+// Se cierra al pulsar fuera del header o con la tecla Escape
+document.addEventListener("click", (event) => {
+  if (navbar.classList.contains("abierto") && !event.target.closest(".header")) {
+    setMenuOpen(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenuOpen(false);
+});
+
+// =========================================
 // INICIALIZAR IDIOMA
 // =========================================
 
@@ -297,6 +329,9 @@ const navSectionHandlers = {
 document.querySelectorAll(".navbar a").forEach((link) => {
   const href = link.getAttribute("href");
   const handler = navSectionHandlers[href];
+
+  // En móvil, el menú desplegable se cierra al elegir una sección
+  link.addEventListener("click", () => setMenuOpen(false));
 
   if (handler) {
     link.addEventListener("click", (event) => {

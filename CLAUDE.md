@@ -127,3 +127,8 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 - **Hecho:** CV en PDF (español e inglés) actualizados en Canva para que coincidan con el CV online, sin los proyectos (decisión de Walter). Mismo resumen, mismos conocimientos que el index, enlace al portafolio web, "Cádiz, España", grado superior DAM, Español (nativo) + Inglés (B1), tildes y erratas corregidas. Los dos CV tienen la misma maquetación.
 - Los PDF nuevos sustituyen a los de `docs/` con el mismo nombre (los botones de descarga no cambian). Los antiguos están en `_papelera/` (carpeta de trabajo) con el sufijo `_antiguo_2026-06`.
 - Diseños de Canva: ES `DAHBHwYQ2wo`, EN `DAHLop407yM`. Copias de seguridad de antes de los cambios: `DAHY9eQQ2dg` (ES) y `DAHY9V9K1xo` (EN).
+
+### 2026-10-28
+- Comprobado: el enlace "Tecnologías" del menú **ya funcionaba** (abre el panel 02 de "Sobre mí" y baja hasta él, en español e inglés). El pendiente del 2026-10-24 estaba desfasado.
+- **Hecho:** **menú para móvil y tablet** (hasta 900 px, donde el menú se escondía y no había forma de navegar): botón ☰ en el header que despliega los enlaces debajo; se cierra al elegir una sección, al pulsar fuera o con Escape. En pantallas de hasta 450 px el logo y los botones del header son algo más pequeños para que quepan los tres botones.
+- Visto en móvil, para la revisión pendiente: dentro de los paneles de "Sobre mí" el texto queda en una columna muy estrecha, y el botón flotante de WhatsApp tapa parte del texto del hero.
