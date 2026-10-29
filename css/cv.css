@@ -22,22 +22,34 @@
   --verde: #34d399;
   --amarillo: #fbbf24;
 
+  /* Morado de los textos: en oscuro es el mismo morado; en claro, uno más profundo */
+  --accent-text: #7c5cff;
+
   --border: #1f2937;
 }
 
+/* Mismo modo claro que el portafolio: blanco roto lila, tarjetas blancas con
+   borde y sombra morada suave, y el morado profundo para los textos */
 body.light-mode {
-  --bg-primary: #f5f7fa;
-  --bg-secondary: #ffffff;
+  --bg-primary: #f6f4fb;
+  --bg-secondary: #f6f4fb;
 
-  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
 
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
+  --text-primary: #1c1830;
+  --text-secondary: #4a4560;
 
-  --verde: #059669;
+  --accent-text: #5b3fd6;
+
+  /* Verde más oscuro para que los títulos verdes se lean bien sobre claro */
+  --verde: #047857;
   --amarillo: #d97706;
 
-  --border: #d1d5db;
+  --border: #e7e2f3;
+  --border-hover: #cfc4f2;
+
+  --shadow: 0 4px 20px rgba(91, 63, 214, 0.08);
+  --shadow-hover: 0 10px 30px rgba(91, 63, 214, 0.16);
 }
 
 body {
@@ -82,7 +94,7 @@ a {
 }
 
 body.light-mode .cv-barra {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(246, 244, 251, 0.88);
 }
 
 .cv-volver {
@@ -102,7 +114,7 @@ body.light-mode .cv-barra {
 }
 
 .cv-volver:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .cv-acciones {
@@ -201,7 +213,7 @@ body.light-mode .cv-barra {
 }
 
 .cv-nombre span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .cv-puesto {
@@ -212,7 +224,7 @@ body.light-mode .cv-barra {
 
   background: rgba(124, 92, 255, 0.12);
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 0.8rem;
   font-weight: 700;
@@ -285,7 +297,7 @@ body.light-mode .cv-barra {
 .cv-contacto i {
   width: 18px;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   text-align: center;
 }
@@ -299,7 +311,7 @@ body.light-mode .cv-barra {
 }
 
 .cv-contacto a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Habilidades con barra */
@@ -387,7 +399,7 @@ body.light-mode .cv-barra {
 }
 
 .cv-chip i {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Idiomas con puntos */
@@ -472,7 +484,7 @@ body.light-mode .cv-barra {
 .cv-cifra strong {
   display: block;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 2.6rem;
 
@@ -562,7 +574,7 @@ body.light-mode .cv-barra {
 .cv-lugar {
   margin: 4px 0 12px;
 
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: 600;
 }
 
@@ -598,7 +610,7 @@ body.light-mode .cv-barra {
 
   background: rgba(124, 92, 255, 0.12);
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 0.8rem;
   font-weight: 700;
@@ -621,7 +633,7 @@ body.light-mode .cv-barra {
 
   margin-top: 16px;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-weight: 700;
 
@@ -706,7 +718,7 @@ body.light-mode .cv-barra {
 }
 
 .cv-descargar i {
-  color: var(--accent);
+  color: var(--accent-text);
 
   transition: color 0.3s;
 }
@@ -724,7 +736,54 @@ body.light-mode .cv-barra {
 }
 
 body.light-mode .cv-descargar {
-  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12);
+  background: var(--card-bg);
+
+  box-shadow: var(--shadow-hover);
+}
+
+body.light-mode .cv-descargar:hover {
+  background: var(--accent);
+}
+
+/* ----------------------------------------------------------
+   MODO CLARO: botones, tarjetas, píldoras y etiquetas
+---------------------------------------------------------- */
+
+body.light-mode .cv-acciones button {
+  background: var(--card-bg);
+}
+
+body.light-mode .cv-acciones button:hover {
+  border-color: var(--border-hover);
+}
+
+/* El sol del botón de tema, en morado en vez del emoji naranja */
+body.light-mode #cvTema i {
+  color: var(--accent-text);
+}
+
+body.light-mode .cv-cifra,
+body.light-mode .cv-tarjeta {
+  box-shadow: var(--shadow);
+}
+
+body.light-mode .cv-proyecto:hover {
+  border-color: var(--border-hover);
+
+  box-shadow: var(--shadow-hover);
+}
+
+body.light-mode .cv-puesto,
+body.light-mode .cv-etiqueta {
+  border-color: var(--border-hover);
+
+  background: #eae4fb;
+}
+
+body.light-mode .cv-etiqueta-verde {
+  border-color: rgba(4, 120, 87, 0.3);
+
+  background: rgba(4, 120, 87, 0.08);
 }
 
 /* ==========================================================

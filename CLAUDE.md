@@ -146,3 +146,13 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
   - Botón de la portada: **"Ver CV" / "View CV"** → abre `cv.html` (antes descargaba el PDF). El PDF se descarga desde el CV online.
   - Botón de Contacto: sigue siendo **"Descargar CV"** (PDF directo), porque quien llega ahí suele querer guardarlo o reenviarlo.
   - El CV (menú y portada) se abre **en la misma pestaña**; el CV tiene "Volver al portafolio".
+
+### 2026-10-29
+- **Hecho:** **modo claro** rehecho con la paleta que pidió Walter (el oscuro no se toca; comprobado elemento a elemento contra la versión publicada: 0 diferencias en `index.html` y en `cv.html`).
+  - Fondo lila `#F6F4FB` en todas las secciones (sin manchas/degradados lilas de fondo), header del mismo color semitransparente con borde `#E7E2F3`.
+  - Tarjetas blancas `#FFFFFF` con borde `#E7E2F3` y sombra morada suave; al pasar el ratón, borde `#CFC4F2` y sombra más fuerte. Arreglado que los paneles de "Sobre mí" se volvieran oscuros al pasar el ratón en modo claro.
+  - Dos morados: `--accent` (`#7C5CFF`, vivo) para botones, borde de la foto y detalles grandes; `--accent-text` (`#5B3FD6`) para textos morados en claro (en oscuro `--accent-text` vale lo mismo que `--accent`). Textos `#1C1830` y `#4A4560`. Píldora de bienvenida `#EAE4FB` + `#5B3FD6`.
+  - Sol del botón de tema: icono Font Awesome en morado en vez del emoji naranja (`js/app.js`, `js/cv.js`).
+  - Tarjetas de proyectos con "Autor" pegado abajo: **solo en modo claro**, como se pidió.
+  - CV: misma paleta; verde de los títulos `#047857` en claro para que cumpla contraste.
+  - Contraste AA en todos los textos. Única excepción: texto blanco sobre el morado vivo de los botones (4,35:1), porque Walter pidió mantener ese morado en botones.

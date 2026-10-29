@@ -6,9 +6,12 @@ const themeBtn = document.getElementById("themeBtn");
 
 const savedTheme = localStorage.getItem("theme");
 
+// En modo claro el sol es un icono (se colorea en morado desde el CSS) en lugar del emoji naranja
+const SUN_ICON = '<i class="fas fa-sun"></i>';
+
 if (savedTheme === "light") {
   document.body.classList.add("light-mode");
-  themeBtn.textContent = "☀️";
+  themeBtn.innerHTML = SUN_ICON;
 }
 
 themeBtn.addEventListener("click", () => {
@@ -17,7 +20,7 @@ themeBtn.addEventListener("click", () => {
   const lightMode = document.body.classList.contains("light-mode");
 
   if (lightMode) {
-    themeBtn.textContent = "☀️";
+    themeBtn.innerHTML = SUN_ICON;
 
     localStorage.setItem("theme", "light");
   } else {

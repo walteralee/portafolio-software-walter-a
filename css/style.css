@@ -29,6 +29,9 @@
   --accent: #7c5cff;
   --accent-hover: #9378ff;
 
+  /* Morado de los textos: en oscuro es el mismo morado; en claro, uno más profundo */
+  --accent-text: #7c5cff;
+
   --border: #1f2937;
 
   --shadow: 0 0 30px rgba(124, 92, 255, 0.2);
@@ -38,18 +41,25 @@
    VARIABLES DEL MODO CLARO
 ---------------------------------------------------------- */
 
+/* Blanco roto con un tinte lila (sin blanco puro de fondo), tarjetas blancas
+   con borde y sombra morada suave, y dos morados: el vivo para botones y
+   detalles grandes, y uno más profundo para los textos */
 body.light-mode {
-  --bg-primary: #f5f7fa;
-  --bg-secondary: #ffffff;
+  --bg-primary: #f6f4fb;
+  --bg-secondary: #f6f4fb;
 
   --card-bg: #ffffff;
 
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
+  --text-primary: #1c1830;
+  --text-secondary: #4a4560;
 
-  --border: #d1d5db;
+  --accent-text: #5b3fd6;
 
-  --shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  --border: #e7e2f3;
+  --border-hover: #cfc4f2;
+
+  --shadow: 0 4px 20px rgba(91, 63, 214, 0.08);
+  --shadow-hover: 0 10px 30px rgba(91, 63, 214, 0.16);
 }
 
 /* ----------------------------------------------------------
@@ -140,7 +150,7 @@ section {
 }
 
 .logo span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ----------------------------------------------------------
@@ -164,7 +174,7 @@ section {
 }
 
 .navbar a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ----------------------------------------------------------
@@ -209,14 +219,34 @@ section {
    HEADER EN MODO CLARO
 ---------------------------------------------------------- */
 
+/* El mismo fondo lila, semitransparente con el desenfoque del header */
 body.light-mode .header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(246, 244, 251, 0.88);
 }
 
 body.light-mode .header-actions button {
-  background: #f3f4f6;
+  background: var(--card-bg);
 
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border);
+
+  color: var(--text-primary);
+}
+
+body.light-mode .header-actions button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: white;
+}
+
+/* El sol del botón de tema, en morado en vez del emoji naranja */
+body.light-mode #themeBtn i {
+  color: var(--accent-text);
+}
+
+body.light-mode #themeBtn:hover i {
+  color: white;
 }
 
 /* ==========================================================
@@ -310,7 +340,7 @@ body.light-mode .header-actions button {
 .hero-content h2 {
   font-size: 2rem;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   margin-bottom: 20px;
 }
@@ -424,8 +454,22 @@ body.light-mode .btn-secondary:hover {
   color: white;
 }
 
+body.light-mode .hero-tag {
+  background: #eae4fb;
+
+  color: var(--accent-text);
+}
+
 body.light-mode .social-links a {
-  color: #111827;
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+body.light-mode .social-links a:hover {
+  color: white;
 }
 
 /* ==========================================
@@ -475,7 +519,7 @@ body.light-mode .social-links a {
 .section-label {
   display: inline-block;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 1.1rem;
   font-weight: 800;
@@ -488,7 +532,7 @@ body.light-mode .social-links a {
 .about-block-label {
   display: inline-block;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 0.78rem;
   font-weight: 800;
@@ -512,7 +556,7 @@ body.light-mode .social-links a {
 }
 
 .section-heading h2 span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .section-heading > p {
@@ -1015,7 +1059,7 @@ body.light-mode .social-links a {
 }
 
 .about-link {
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-weight: 600;
 
@@ -1115,19 +1159,48 @@ body.light-mode .about-accordion-body .about-main-text {
 }
 
 body.light-mode .about-accordion {
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--card-bg);
+
+  border-color: var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+/* Sin esto, al pasar el ratón el panel se volvía oscuro (usaba el degradado del modo oscuro) */
+body.light-mode .about-accordion:not([open]):not(.about-accordion--accent):hover {
+  background: var(--card-bg);
+
+  border-color: var(--border-hover);
+
+  box-shadow: var(--shadow-hover);
 }
 
 body.light-mode .about-accordion[open]:not(.about-accordion--accent) {
   background: linear-gradient(
     135deg,
-    rgba(124, 92, 255, 0.16),
-    rgba(255, 255, 255, 0.92)
+    rgba(91, 63, 214, 0.07),
+    #ffffff 55%
   );
+
+  border-color: var(--border-hover);
+  border-left-color: var(--accent);
+
+  box-shadow: var(--shadow-hover);
 }
 
+/* Números 01, 02... en el morado profundo para que se lean bien */
+body.light-mode .about-accordion:not(.about-accordion--accent) .about-accordion-summary .about-block-number {
+  color: var(--accent-text);
+}
+
+/* El panel morado "En la actualidad" conserva su borde y su brillo */
 body.light-mode .about-accordion--accent {
   background: var(--accent);
+
+  border-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0.7);
+
+  box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
 }
 
 /* En móvil el texto deja de ir sangrado a la altura del título: con la
@@ -1176,26 +1249,23 @@ body.light-mode .about-accordion--accent {
    SOBRE MÍ — MODO CLARO
 ========================================== */
 
+/* Fondo liso: sin las manchas lilas, que en claro parecían un fallo */
 body.light-mode .about {
-  background:
-    radial-gradient(
-      circle at 10% 20%,
-      rgba(124, 92, 255, 0.1),
-      transparent 30%
-    ),
-    var(--bg-secondary);
+  background: var(--bg-secondary);
 }
 
 body.light-mode .about-intro {
   background: linear-gradient(
     135deg,
-    rgba(124, 92, 255, 0.1),
-    rgba(255, 255, 255, 0.95)
+    rgba(91, 63, 214, 0.07),
+    #ffffff 55%
   );
 }
 
 body.light-mode .about-block {
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--card-bg);
+
+  box-shadow: var(--shadow);
 }
 
 /* ==========================================
@@ -1392,7 +1462,7 @@ body.light-mode .about-block {
 .proyecto-author {
   display: inline-block;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 0.78rem;
   font-weight: 800;
@@ -1407,17 +1477,38 @@ body.light-mode .about-block {
 ========================================== */
 
 body.light-mode .proyectos {
-  background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(124, 92, 255, 0.1),
-      transparent 30%
-    ),
-    var(--bg-secondary);
+  background: var(--bg-secondary);
 }
 
+/* Tarjetas de igual altura con "Autor" siempre abajo (solo en claro, como se pidió) */
 body.light-mode .proyecto-card {
-  background: rgba(255, 255, 255, 0.82);
+  display: flex;
+
+  flex-direction: column;
+
+  background: var(--card-bg);
+
+  box-shadow: var(--shadow);
+}
+
+body.light-mode .proyecto-card:hover {
+  border-color: var(--border-hover);
+
+  box-shadow: var(--shadow-hover);
+}
+
+body.light-mode .proyecto-info {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+body.light-mode .proyecto-author {
+  align-self: flex-start;
+
+  margin-top: auto;
 }
 
 /* ==========================================
@@ -1646,7 +1737,7 @@ body.light-mode .proyecto-card {
   border: 1px solid rgba(124, 92, 255, 0.35);
   border-radius: 14px;
 
-  color: var(--accent);
+  color: var(--accent-text);
 
   font-size: 1.15rem;
 }
@@ -1684,7 +1775,7 @@ body.light-mode .proyecto-card {
 }
 
 .contacto-email a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .contacto-copiar {
@@ -1708,7 +1799,7 @@ body.light-mode .proyecto-card {
 .contacto-copiar:hover {
   border-color: var(--accent);
 
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .contacto-copiar.contacto-copiado {
@@ -1974,13 +2065,19 @@ body.light-mode .proyecto-card {
    MODO CLARO
 ---------------------------------------------------------- */
 
+body.light-mode .contacto {
+  background: var(--bg-primary);
+}
+
 body.light-mode .contacto-tarjeta {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--card-bg);
+
+  box-shadow: var(--shadow);
 }
 
 body.light-mode .contacto-campo input,
 body.light-mode .contacto-campo textarea {
-  background: #f9fafb;
+  background: var(--bg-primary);
 }
 
 body.light-mode .contacto-estado-ok {
@@ -2027,7 +2124,7 @@ body.light-mode .contacto-error {
 .footer-cafe {
   margin-left: 4px;
 
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .footer-redes {

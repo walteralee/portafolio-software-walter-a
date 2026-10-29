@@ -60,7 +60,12 @@ function leerTema() {
 
 function ponerTema(tema) {
   document.body.classList.toggle("light-mode", tema === "light");
-  botonTema.textContent = tema === "light" ? "☀️" : "🌙";
+  // En claro, el sol es un icono que el CSS colorea en morado (no el emoji naranja)
+  if (tema === "light") {
+    botonTema.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    botonTema.textContent = "🌙";
+  }
 
   try {
     localStorage.setItem("theme", tema);
