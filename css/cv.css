@@ -402,6 +402,23 @@ body.light-mode .cv-barra {
   color: var(--accent-text);
 }
 
+/* Herramienta principal (Claude Code): borde morado, como las etiquetas moradas del CV */
+.cv-chip-destacado {
+  border-color: rgba(124, 92, 255, 0.45);
+
+  background: rgba(124, 92, 255, 0.12);
+
+  color: var(--accent-text);
+
+  font-weight: 700;
+}
+
+body.light-mode .cv-chip-destacado {
+  border-color: var(--border-hover);
+
+  background: #eae4fb;
+}
+
 /* Idiomas con puntos */
 .cv-idiomas {
   display: flex;
