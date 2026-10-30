@@ -27,6 +27,12 @@ function ponerIdioma(idioma) {
 
   document.documentElement.lang = idioma;
   document.title = TITULOS[idioma];
+
+  // La descripción para buscadores también cambia de idioma (data-es / data-en)
+  const descripcion = document.querySelector('meta[name="description"]');
+  if (descripcion && descripcion.dataset[idioma]) {
+    descripcion.content = descripcion.dataset[idioma];
+  }
   botonIdioma.textContent = idioma === "es" ? "🇬🇧" : "🇪🇸";
 
   // El enlace "Volver" lleva al portafolio en el mismo idioma

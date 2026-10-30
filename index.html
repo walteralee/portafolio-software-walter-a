@@ -8,10 +8,33 @@
 
   <title>Walter Cutiño | Portafolio Software</title>
 
+  <!-- Descripción para buscadores. js/app.js la cambia al inglés con data-en -->
+  <meta name="description"
+    content="Portafolio de Walter Alejandro Cutiño Ledo, Back-End Developer y Full-Stack Junior en Cádiz: aplicaciones con Java, Spring Boot, C# y Python para la gestión interna de empresas."
+    data-es="Portafolio de Walter Alejandro Cutiño Ledo, Back-End Developer y Full-Stack Junior en Cádiz: aplicaciones con Java, Spring Boot, C# y Python para la gestión interna de empresas."
+    data-en="Portfolio of Walter Alejandro Cutiño Ledo, Back-End Developer and Junior Full-Stack based in Cádiz, Spain: Java, Spring Boot, C# and Python applications for companies' internal management." />
+
+  <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp, X...) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Walter Cutiño · Portafolio" />
+  <meta property="og:title" content="Walter Cutiño | Portafolio Software" />
+  <meta property="og:description" content="Back-End Developer y Full-Stack Junior. Aplicaciones con Java, Spring Boot, C# y Python para la gestión interna de empresas." />
+  <meta property="og:url" content="https://walteralee.github.io/portafolio-software-walter-a/" />
+  <meta property="og:image" content="https://walteralee.github.io/portafolio-software-walter-a/imagenes/og-imagen.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Walter Alejandro Cutiño Ledo, Back-End Developer | Full-Stack Junior" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Walter Cutiño | Portafolio Software" />
+  <meta name="twitter:description" content="Back-End Developer y Full-Stack Junior. Aplicaciones con Java, Spring Boot, C# y Python para la gestión interna de empresas." />
+  <meta name="twitter:image" content="https://walteralee.github.io/portafolio-software-walter-a/imagenes/og-imagen.jpg" />
+
   <link rel="icon" type="image/png" href="imagenes/logo.png" />
 
   <!-- ?v=fecha: al cambiar los estilos o scripts se sube la fecha y los navegadores descargan la versión nueva -->
-  <link rel="stylesheet" href="css/style.css?v=2026-10-29" />
+  <link rel="stylesheet" href="css/style.css?v=2026-10-30" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" />
@@ -315,9 +338,10 @@
 
           <p>
             En proyectos de mayor tamaño también trabajo con enfoques como la
-            <strong>arquitectura de microservicios</strong> y la
-            <strong>arquitectura hexagonal</strong>, especialmente en
-            aplicaciones desarrolladas con <strong>Spring Boot</strong>,
+            <strong>arquitectura de microservicios</strong>, y en las
+            aplicaciones desarrolladas con <strong>Spring Boot</strong> y
+            <strong>ASP.NET Core</strong> aplico el <strong>patrón repositorio</strong>
+            y la <strong>inyección de dependencias</strong>,
             separando responsabilidades y evitando que la lógica principal quede
             demasiado ligada a la infraestructura o a servicios externos. Durante
             el desarrollo avanzo de forma incremental, probando cada componente
@@ -571,9 +595,10 @@
 
           <p>
             On larger projects I also work with approaches such as
-            <strong>microservices architecture</strong> and
-            <strong>hexagonal architecture</strong>, especially in applications
-            built with <strong>Spring Boot</strong>, separating responsibilities
+            <strong>microservices architecture</strong>, and in applications
+            built with <strong>Spring Boot</strong> and <strong>ASP.NET Core</strong>
+            I apply the <strong>repository pattern</strong> and
+            <strong>dependency injection</strong>, separating responsibilities
             and preventing the core logic from becoming too tied to
             infrastructure or external services. During development I progress
             incrementally, testing each component before integrating it with the
@@ -691,18 +716,19 @@
           </div>
 
           <div class="proyecto-info">
+            <span class="proyecto-badge">En producción</span>
             <h3 class="proyecto-title">Flor de Tuna</h3>
             <p class="proyecto-desc">
               Página web para el restaurante Flor de Tuna, con presentación del local, menú y contacto, totalmente
               responsive y desplegada en producción.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SEO</li></ul>
           </div>
         </article>
 
         <article class="proyecto-card">
           <div class="proyecto-media">
-            <img src="imagenes/proyectos/iberostar-inventory-sync.png" alt="Captura de la aplicación Iberostar Inventory Sync" loading="lazy" />
+            <img src="imagenes/proyectos/iberostar-inventory-sync.webp" alt="Captura de la aplicación Iberostar Inventory Sync" loading="lazy" />
 
             <div class="proyecto-overlay">
               <!-- DEMO OCULTA hasta tener los vídeos: <a href="#" class="btn-primary proyecto-btn proyecto-demo-btn" data-youtube="Cojg0HHiWys">Ver demo</a> -->
@@ -711,18 +737,19 @@
           </div>
 
           <div class="proyecto-info">
+            <span class="proyecto-badge">En uso en un hotel</span>
             <h3 class="proyecto-title">Iberostar Inventory Sync</h3>
             <p class="proyecto-desc">
               Aplicación de escritorio para Windows que lee los informes del Economato del hotel y vuelca cada entrega
               en el Excel de stock de su punto de venta, sin errores ni duplicados.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>Python</li><li>Flask</li><li>104 tests</li></ul>
           </div>
         </article>
 
         <article class="proyecto-card">
           <div class="proyecto-media">
-            <img class="proyecto-img-top" src="imagenes/proyectos/miniaturas.webp" alt="Captura de la aplicación Miniaturas" loading="lazy" />
+            <img class="proyecto-img-top" src="imagenes/proyectos/miniaturas.webp?v=2026-10-30" alt="Captura de la aplicación Miniaturas" loading="lazy" />
 
             <div class="proyecto-overlay">
               <!-- DEMO OCULTA hasta tener los vídeos: <a href="#" class="btn-primary proyecto-btn proyecto-demo-btn" data-youtube="Cojg0HHiWys">Ver demo</a> -->
@@ -737,7 +764,7 @@
               cualquier dispositivo de tu red. API REST en Node.js/Express con SQLite y 23 tests, frontend en React y
               vista previa automática con Python.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>Node.js</li><li>Express</li><li>React</li><li>SQLite</li></ul>
           </div>
         </article>
 
@@ -758,7 +785,7 @@
               clásicas y corta tus dobles amenazas. APK listo para instalar en 3 pasos y 14 tests que juegan todas
               las partidas posibles.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>Android</li><li>Java</li><li>14 tests</li></ul>
           </div>
         </article>
 
@@ -779,7 +806,7 @@
               API REST en ASP.NET 8 por capas con SQLite, web en JavaScript, 14 tests y versión para Windows sin
               instalar nada.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>C#</li><li>ASP.NET 8</li><li>SQLite</li><li>Docker</li></ul>
           </div>
         </article>
 
@@ -800,7 +827,7 @@
               Spring Boot por capas con SQLite, el total lo calcula el servidor, 10 tests y versión para Windows
               sin instalar nada.
             </p>
-            <span class="proyecto-author">Autor: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Tecnologías"><li>Java</li><li>Spring Boot</li><li>SQLite</li><li>Docker</li></ul>
           </div>
         </article>
       </div>
@@ -833,18 +860,19 @@
           </div>
 
           <div class="proyecto-info">
+            <span class="proyecto-badge">Live</span>
             <h3 class="proyecto-title">Flor de Tuna</h3>
             <p class="proyecto-desc">
               Website for the Flor de Tuna restaurant, showcasing the venue, menu and contact details, fully
               responsive and deployed in production.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SEO</li></ul>
           </div>
         </article>
 
         <article class="proyecto-card">
           <div class="proyecto-media">
-            <img src="imagenes/proyectos/iberostar-inventory-sync.png" alt="Screenshot of the Iberostar Inventory Sync app" loading="lazy" />
+            <img src="imagenes/proyectos/iberostar-inventory-sync.webp" alt="Screenshot of the Iberostar Inventory Sync app" loading="lazy" />
 
             <div class="proyecto-overlay">
               <!-- DEMO OCULTA hasta tener los vídeos: <a href="#" class="btn-primary proyecto-btn proyecto-demo-btn" data-youtube="Cojg0HHiWys">View demo</a> -->
@@ -853,18 +881,19 @@
           </div>
 
           <div class="proyecto-info">
+            <span class="proyecto-badge">In use at a hotel</span>
             <h3 class="proyecto-title">Iberostar Inventory Sync</h3>
             <p class="proyecto-desc">
               Windows desktop app that reads the hotel storeroom reports and logs each delivery into the stock Excel
               of the outlet that received it, with no errors or duplicates.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>Python</li><li>Flask</li><li>104 tests</li></ul>
           </div>
         </article>
 
         <article class="proyecto-card">
           <div class="proyecto-media">
-            <img class="proyecto-img-top" src="imagenes/proyectos/miniaturas.webp" alt="Screenshot of the Miniaturas app" loading="lazy" />
+            <img class="proyecto-img-top" src="imagenes/proyectos/miniaturas.webp?v=2026-10-30" alt="Screenshot of the Miniaturas app" loading="lazy" />
 
             <div class="proyecto-overlay">
               <!-- DEMO OCULTA hasta tener los vídeos: <a href="#" class="btn-primary proyecto-btn proyecto-demo-btn" data-youtube="Cojg0HHiWys">View demo</a> -->
@@ -879,7 +908,7 @@
               on your network. REST API in Node.js/Express with SQLite and 23 tests, React frontend and automatic
               previews with Python.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>Node.js</li><li>Express</li><li>React</li><li>SQLite</li></ul>
           </div>
         </article>
 
@@ -899,7 +928,7 @@
               Android app in Java to play against a friend or an unbeatable AI that uses classic traps and blocks
               your forks. Ready-to-install APK in 3 steps and 14 tests that play every possible game.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>Android</li><li>Java</li><li>14 tests</li></ul>
           </div>
         </article>
 
@@ -919,7 +948,7 @@
               Management of a fleet of delivery drones carrying medicines: weight limits, battery and delivery cycle.
               Layered ASP.NET 8 REST API with SQLite, JavaScript frontend, 14 tests and a no-install Windows version.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>C#</li><li>ASP.NET 8</li><li>SQLite</li><li>Docker</li></ul>
           </div>
         </article>
 
@@ -939,7 +968,7 @@
               Web shop for a butcher's: catalogue, cart and orders stored in a database. Layered Spring Boot REST API
               with SQLite, server-side order totals, 10 tests and a no-install Windows version.
             </p>
-            <span class="proyecto-author">Author: Walter Cutiño</span>
+            <ul class="proyecto-tags" aria-label="Technologies"><li>Java</li><li>Spring Boot</li><li>SQLite</li><li>Docker</li></ul>
           </div>
         </article>
       </div>
@@ -1140,7 +1169,7 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=2026-10-29"></script>
+  <script src="js/app.js?v=2026-10-30"></script>
   <script src="js/contacto.js?v=2026-10-24c"></script>
 </body>
 

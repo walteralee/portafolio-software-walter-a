@@ -68,6 +68,12 @@ function setLanguage(language) {
     currentLanguage = "en";
   }
 
+  // La descripción para buscadores también cambia de idioma (data-es / data-en)
+  const description = document.querySelector('meta[name="description"]');
+  if (description && description.dataset[language]) {
+    description.content = description.dataset[language];
+  }
+
   // Avisa al resto de la página (por ejemplo, al formulario de contacto) del idioma elegido
   document.documentElement.lang = language;
   document.dispatchEvent(new CustomEvent("cambio-idioma", { detail: language }));

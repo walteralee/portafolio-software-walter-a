@@ -633,6 +633,37 @@ body.light-mode .cv-chip-destacado {
   font-weight: 700;
 }
 
+/* Distintivo relleno ("En producción", "En uso en un hotel"), como en el portafolio */
+.cv-distintivo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 3px 12px;
+
+  border-radius: 999px;
+
+  background: #6544e6;
+
+  color: #fff;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.cv-distintivo::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #fff;
+}
+
 .cv-etiqueta-verde {
   border-color: rgba(52, 211, 153, 0.45);
 

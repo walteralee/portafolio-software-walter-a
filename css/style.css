@@ -1459,17 +1459,88 @@ body.light-mode .about-block {
   line-height: 1.55;
 }
 
-.proyecto-author {
-  display: inline-block;
+/* Tarjetas de igual altura con las tecnologías siempre abajo */
+.proyecto-card {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.proyecto-info {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* Etiquetas con las tecnologías del proyecto (sustituyen a "Autor") */
+.proyecto-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: auto;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.proyecto-tags li {
+  padding: 4px 12px;
+
+  border: 1px solid rgba(124, 92, 255, 0.45);
+  border-radius: 999px;
+
+  background: rgba(124, 92, 255, 0.12);
 
   color: var(--accent-text);
 
   font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* Distintivo encima del título ("En producción", "En uso en un hotel").
+   Va fuera de la captura para no tapar la interfaz de la app. */
+.proyecto-badge {
+  align-self: flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  padding: 5px 12px;
+
+  border-radius: 999px;
+
+  /* Un morado un pelín más profundo que el de los botones para que el texto
+     blanco, tan pequeño, cumpla el contraste AA */
+  background: #6544e6;
+
+  color: #fff;
+
+  font-size: 0.75rem;
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 0.3px;
+}
 
-  text-transform: uppercase;
+.proyecto-badge::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #fff;
 }
 
 /* ==========================================
@@ -1480,12 +1551,7 @@ body.light-mode .proyectos {
   background: var(--bg-secondary);
 }
 
-/* Tarjetas de igual altura con "Autor" siempre abajo (solo en claro, como se pidió) */
 body.light-mode .proyecto-card {
-  display: flex;
-
-  flex-direction: column;
-
   background: var(--card-bg);
 
   box-shadow: var(--shadow);
@@ -1497,18 +1563,10 @@ body.light-mode .proyecto-card:hover {
   box-shadow: var(--shadow-hover);
 }
 
-body.light-mode .proyecto-info {
-  flex: 1;
+body.light-mode .proyecto-tags li {
+  border-color: var(--border-hover);
 
-  display: flex;
-
-  flex-direction: column;
-}
-
-body.light-mode .proyecto-author {
-  align-self: flex-start;
-
-  margin-top: auto;
+  background: #eae4fb;
 }
 
 /* ==========================================

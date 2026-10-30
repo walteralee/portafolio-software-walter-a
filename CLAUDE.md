@@ -163,3 +163,9 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
 
 ### 2026-10-30
 - **Hecho:** CV en PDF (ES y EN) actualizados en Canva con las habilidades y herramientas vigentes y el resumen sin "escalables" / "scalable" (mismo texto que el CV online). Sustituidos en `docs/` con el mismo nombre; los anteriores están en `_papelera/` con el sufijo `_antiguo_2026-10-25`.
+- **Hecho (retoques finales):**
+  - Tarjetas de proyectos: "Autor: Walter Cutiño" sustituido por etiquetas de tecnologías (`.proyecto-tags`), pegadas abajo en las 6 tarjetas (ahora en los dos modos). Distintivos (`.proyecto-badge`) encima del título: Flor de Tuna "En producción" / "Live" e Iberostar "En uso en un hotel" / "In use at a hotel". Van encima del título y no sobre la captura para no tapar la interfaz de las apps. En el CV, los mismos distintivos (`.cv-distintivo`) en la experiencia de Flor de Tuna y en la tarjeta de Iberostar.
+  - Imagen de Miniaturas nueva (1600x1000 webp): la app funcionando con el filtro "Filosofía (9)" y miniaturas hechas con cuadros de dominio público de Wikimedia Commons (Rafael, David, Rembrandt, Gérôme, Frans Hals, Friedrich…), con el título encima. Se montó con una carpeta de datos aparte (`ALMACENAMIENTO_DIR`), sin tocar los datos reales de Miniaturas.
+  - Captura de Iberostar rehecha con más zoom (1600x1000 webp, `iberostar-inventory-sync.webp`), sin tocar sus datos (`IBEROSTAR_DATA_DIR` aparte). Las imágenes antiguas están en `_papelera/`.
+  - Vista previa al compartir: `meta description` (cambia a inglés con `data-en`), Open Graph y Twitter card en `index.html` y `cv.html`, con `imagenes/og-imagen.jpg` (1200x630: foto, nombre y "Back-End Developer | Full-Stack Junior").
+  - Bloque 03 (Metodología): fuera "arquitectura hexagonal"; ahora menciona el patrón repositorio y la inyección de dependencias en Spring Boot y ASP.NET Core.
