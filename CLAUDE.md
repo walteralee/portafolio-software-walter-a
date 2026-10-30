@@ -160,3 +160,6 @@ PORTAFOLIO SOFTWARE WALTER ALEJANDRO CUTIÑO LEDO/        ← carpeta exterior (
   - Tarjetas de proyectos con "Autor" pegado abajo: **solo en modo claro**, como se pidió.
   - CV: misma paleta; verde de los títulos `#047857` en claro para que cumpla contraste.
   - Contraste AA en todos los textos. Única excepción: texto blanco sobre el morado vivo de los botones (4,35:1), porque Walter pidió mantener ese morado en botones.
+
+### 2026-10-30
+- **Hecho:** CV en PDF (ES y EN) actualizados en Canva con las habilidades y herramientas vigentes y el resumen sin "escalables" / "scalable" (mismo texto que el CV online). Sustituidos en `docs/` con el mismo nombre; los anteriores están en `_papelera/` con el sufijo `_antiguo_2026-10-25`.
